@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
-timezone: ''
+title: ZJingW's Blog
+subtitle: 技术 = 拿来即用
+description: 一处记录生活的地方
+keywords: 前端
+author: ZJingW
+language: zh-CN
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -96,6 +96,22 @@ permalink_pinyin:
   enable: true
   separator: '-' # default: '-'
 
+githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:
+# 添加 RSS 订阅支持
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
 
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder

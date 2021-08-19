@@ -1,5 +1,10 @@
 ---
 title: hexo 使用教程
+author: zJingW
+top: true 
+toc: true
+categories: Hexo
+tags: Hexo
 ---
 
 
@@ -17,9 +22,10 @@ git push origin master:my-blog
 ```
 ### 自动开启自动化部署
 ```bash
-打开`https://jingwzeng.github.io/`就可以自动部署
+打开https://jingwzeng.github.io就可以自动部署
 ```
-
-
+### 表情包
+:smile: :confounded: :fearful: :cold_sweat: :persevere:
+表情包代码地址:https://www.webfx.com/tools/emoji-cheat-sheet/#tabs-3
 
 
