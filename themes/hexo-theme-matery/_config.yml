@@ -16,12 +16,15 @@ menu:
   About:
     url: /about
     icon: fas fa-user-circle
-  # Contact:
-  #   url: /contact
-  #   icon: fas fa-comments
+  Contact:
+    url: /contact
+    icon: fas fa-comments
   Friends:
     url: /friends
     icon: fas fa-address-book
+  BB:
+    url: /bb
+    icon: fas fa-book
   # 二级菜单写法如下
   # Medias:
   #  icon: fas fa-listf
@@ -318,9 +321,9 @@ livere:
 # To use it, activate the configuration item and set appId and appKey.
 # Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
 valine:
-  enable: false
-  appId:
-  appKey:
+  enable: true
+  appId: UMfaB6cgmg5xQ2ywLsLLrGTx-MdYXbMMI
+  appKey: nUShiWBtXr05l5wRY8blFrBO
   notify: false
   verify: false
   visitor: true
@@ -507,7 +510,7 @@ tuxiaochao:
   productId:
 #背景canvas-nest
 canvas_nest:
-  enable: false
+  enable: true
   color: 0,0,255 # 线条颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
   pointColor: 0,0,255 # 交点颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
   opacity: 0.7 # 线条透明度（0~1）, 默认: 0.5
@@ -524,7 +527,7 @@ ribbon:
 
 # 背景动态彩带.
 ribbon_dynamic:
-  enable: true
+  enable: false
 
 # sharejs文章分享模块.
 # 支持顺序，可选项目为twitter, facebook, google, qq, qzone, wechat, weibo, douban, linkedin.
@@ -584,14 +587,14 @@ jsDelivr:
   
 # 网站背景图
 background:
-  enable: false
+  enable: true
   url: "https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg"
 
 # 说说 https://artitalk.js.org/
 artitalk:
-  enable: false
-  appId: # xxxxx
-  appKey: # xxxxxx
+  enable: true
+  appId: UMfaB6cgmg5xQ2ywLsLLrGTx-MdYXbMMI
+  appKey: nUShiWBtXr05l5wRY8blFrBO
 
 # 哔哔功能配置
 # 登陆leancloud创建应用。进入应用后，点击创建 Class，将「 Class 名称」命名为 content
@@ -608,7 +611,7 @@ artitalk:
 # 关注公众号 "黑石哔哔"，发送: //bindCurrentUser:你的APPID,你的MASTERKEY,你的RESTAPI
 # 可用leancloud国际版，国际版api为 https://appid前八位.api.lncldglobal.com
 bbtime:
- enable: false
- appId: # 你的appId
- appKey: # 你的appKey
+ enable: true
+ appId: UMfaB6cgmg5xQ2ywLsLLrGTx-MdYXbMMI
+ appKey: nUShiWBtXr05l5wRY8blFrBO
  serverURLs: # https://你的api
