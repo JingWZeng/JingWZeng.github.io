@@ -4,7 +4,11 @@ author: zJingW
 top: true 
 toc: true
 categories: Hexo
+description: 关于本博客的提交部署方式
 tags: Hexo
+top_img: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108232032968.jpg
+cover: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108232032968.jpg
+sticky: 99
 ---
 
 
