@@ -4,7 +4,7 @@
 
 # Site
 title: ZJingW's Blog
-subtitle: 技术 = 拿来即用
+subtitle: 技术is拿来即用
 description: 一处记录生活的地方
 keywords: 前端
 author: ZJingW
@@ -45,7 +45,7 @@ relative_link: false
 future: true
 highlight:
   enable: false
-  line_number: true
+  line_number: false
   auto_detect: false
   tab_replace: ''
   wrap: true
@@ -53,7 +53,7 @@ highlight:
 prismjs:
   enable: true
   preprocess: true
-  line_number: true
+  line_number: false
   tab_replace: ''
 
 # Home page setting
@@ -122,7 +122,8 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-matery
+# theme: hexo-theme-matery
+theme: butterfly
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
