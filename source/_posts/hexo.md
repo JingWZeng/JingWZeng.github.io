@@ -1,8 +1,6 @@
 ---
 title: hexo 使用教程
-author: zJingW
-top: true 
-toc: true
+author: ZJingW
 categories: Hexo
 description: 关于本博客的提交部署方式
 tags: Hexo
