@@ -29,6 +29,122 @@
     
     
     <entry>
+      <title>Vue项目中问题</title>
+      <link href="/2021/08/24/vue-xiang-mu-zhong-wen-ti/"/>
+      <url>/2021/08/24/vue-xiang-mu-zhong-wen-ti/</url>
+      
+        <content type="html"><![CDATA[<ul><li><code>computer</code>中传参数的话需要使用闭包的方式</li><li><code>filter</code>中无法访问<code>this</code>，使用<code>filter</code>的前提是有个现成的变量</li><li>数字千分位处理并保留两位小数<code>nums.toFixed(2).replace(/(\d)(?=(\d{3}+.)/g,'$1')</code></li><li><code>splice(index,1)</code>返回的数据是被删除的那个数据或者数组 —– 会改变原数组</li><li><code>try/catch</code> 只能捕获同步函数的异常，包括async/await</li><li><code>Vue</code>项目中报错<code>Already include file name 'xxxx' differs from files name...</code>,解决办法是：去掉后面<code>.vue</code>后缀名既可</li><li>页面刷新之后，会重新加载Vue实例，store里面的值会被重新赋值，这样会造成页面刷新只会<code>Vuex</code>中数据丢失的问题，解决办法是：利用<code>Web</code>存储<code>(cookie\localStorage\sessionStorage)</code></li><li>每一个页面都是一个组件，路由跳转的时候组件就会被<code>销毁和重新建立</code>，跳转会经历一个完整的生命周期</li><li><code>babel</code> 又名通天塔，它的作用是<code>ES6</code>、<code>ES7</code>转成<code>ES5</code></li><li>CSS中的行内元素水平居中直接在父元素中<code>text-align:center</code>，垂直居中设置行高和高度相等:<code>height:10px;line-height:10px</code></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+          <category> Vue2 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> Vue2 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>常用跨域</title>
+      <link href="/2021/08/24/chang-yong-kua-yu/"/>
+      <url>/2021/08/24/chang-yong-kua-yu/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>前端访问服务器的时候数据因为跨域无法直接得到<br>服务端和服务端之间的通信是不存在跨域的，都是同源<br>前后端不分离的时候就是同源，前端和后端代码在同一个电脑上</p></blockquote><h4 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h4><ul><li>script</li><li>img</li><li>link</li><li>iframe<blockquote><p>它们不受同源策略的影响</p></blockquote></li></ul><hr><p>它们通过<code>script</code>标签的<code>src</code>，<code>src</code>指向服务器的<code>api</code>地址,因为不受同源的影响，因此可以访问带数据，之后把本地浏览器端的一个函数<code>func</code>作为回调函数传递给服务器。服务器收到请求，同时也可以拿到传过来的函数<br>之后服务器做两件事</p><ol><li>服务端准备数据<code>data</code></li><li>给客户端返回数据(利用传过来的函数进行包装<code>data</code>数据=&gt;<code>func('JSON.stringify(data)+')</code>。客户端收到响应，发现数据格式就是自己全局函数<code>func</code>，于是对函数<code>fun</code>进行调用，执行<code>JSON.parse</code>得到<code>data</code></li></ol><p><em><strong>特点</strong></em></p><ul><li><code>JSONP</code>需要服务端的支持</li><li><code>func</code>必须为全局函数</li><li>服务端需要利用<code>func</code>进行数据包装</li><li>只支持<code>get</code>请求(限制了我平时在开发中，基本用不到它！！！)</li></ul><hr><h4 id="CORS跨域资源共享"><a href="#CORS跨域资源共享" class="headerlink" title="CORS跨域资源共享"></a>CORS跨域资源共享</h4><ul><li>C端发送<code>axios/ajax</code>请求并做一些基本的配置</li><li>S端设置响应头的相关信息，但是需要做<code>options</code>试探性的请求(如果是利用<code>node</code>开服务的话，可以利用中间件进行相关的设置) </li></ul><h4 id="http-proxy-gt-webpack-webpack-dev-server"><a href="#http-proxy-gt-webpack-webpack-dev-server" class="headerlink" title="http proxy =>webpack + webpack-dev-server"></a>http proxy =&gt;webpack + webpack-dev-server</h4><p>正常开发的<code>Vue</code>项目的时候，下载<code>webpack-dev-serve</code>直接设置<code>webpack</code>配置文件既可以。<code>Vue-cli</code>已经集成,在<code>vue.config.js</code>中进行配置</p><h4 id="document-domain-iframe"><a href="#document-domain-iframe" class="headerlink" title="document.domain+iframe"></a>document.domain+iframe</h4><p>只能实现同一个主域，不同子域之间的同源</p><pre class="language-none"><code class="language-none">v.qq.comsports.qq.comqq.com是主域</code></pre><h4 id="nginx反向代理"><a href="#nginx反向代理" class="headerlink" title="nginx反向代理"></a>nginx反向代理</h4><p>不需要前端参与，后端在<code>linux</code>中进行配置</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+          <category> 浏览器 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 浏览器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C-S数据基本过程</title>
+      <link href="/2021/08/24/c-s-shu-ju-ji-ben-guo-cheng/"/>
+      <url>/2021/08/24/c-s-shu-ju-ji-ben-guo-cheng/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>一次http请求至少进行两次的数据转换，发送请求的时候一次，获取响应数据的时候一次</p></blockquote><table><thead><tr><th>顺序</th><th>层名</th><th>格式</th></tr></thead><tbody><tr><td>1</td><td>应用层</td><td>数据</td></tr><tr><td>2</td><td>传输层</td><td>数据+源端口+目标端口</td></tr><tr><td>3</td><td>网络层</td><td>数据+源端口+目标端口+源IP+目标IP</td></tr><tr><td>4</td><td>链路层</td><td>转换成数字信息进行传输</td></tr></tbody></table><h4 id="从客户端-1-gt-2-gt-3-gt-4"><a href="#从客户端-1-gt-2-gt-3-gt-4" class="headerlink" title="从客户端 1->2->3->4"></a>从客户端 1-&gt;2-&gt;3-&gt;4</h4><h4 id="从服务端-4-gt-3-gt-2-gt-1"><a href="#从服务端-4-gt-3-gt-2-gt-1" class="headerlink" title="从服务端 4->3->2->1"></a>从服务端 4-&gt;3-&gt;2-&gt;1</h4>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+          <category> 浏览器 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 浏览器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>闭包</title>
+      <link href="/2021/08/24/bi-bao/"/>
+      <url>/2021/08/24/bi-bao/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>JS的函数内部可以访问全局变量，但是在函数的外部是不可以读取内部的局部变量<br>闭包其实就是提供一个方式来读取函数内部的变量</p></blockquote><h4 id="简要说明"><a href="#简要说明" class="headerlink" title="简要说明"></a>简要说明</h4><ul><li><p>单纯的觉得闭包是拿到函数内部的变量是不对的，以下这种方式也可以拿到，但它不是闭包</p><pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 外部可以拿到a，但不是闭包</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">10</span>    <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">f2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token function">alert</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>    <span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token keyword">function</span> <span class="token function">f3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token keyword">let</span> a <span class="token operator">=</span><span class="token number">100</span>    <span class="token keyword">return</span> a<span class="token punctuation">}</span><span class="token function">f3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">//101</span><span class="token function">f3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">//101   此时函数f3已经被垃圾回收了，再次调用就是重新开始创建变量等一系列的过程</span></code></pre></li><li><p>闭包真正的原因是局部变量无法长久保存，全局变量又容易污染环境，希望可以找到一种既可以长久保存又不会造成全局污染的方法，这就是<code>闭包的机制</code>。所以看似代码复杂化，其实大有来头。</p><pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">100</span>    <span class="token keyword">function</span> <span class="token function">f2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        a<span class="token operator">++</span>        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>    <span class="token punctuation">}</span>    <span class="token keyword">return</span> f2<span class="token punctuation">}</span><span class="token keyword">let</span> f <span class="token operator">=</span> f1 <span class="token comment">// f1执行的结果，其实就是return出来的f2函数 ===== 闭包</span><span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 101</span><span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 102</span><span class="token comment">/** * 1、f1的调用结果被赋给了全局变量f，全局变量f一直存在于内存中，f1函数执行完毕之后就会被释放，但是return出来了一个函数，也就是会造成内存泄漏的原因（变量a没有被释放） * 2、a是局部变量但是他不会被销毁。因为f2还保持着对a的引用（JS的垃圾回收机制之中的引用计数原则）*/</span></code></pre><p>用匿名函数简写</p><pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">100</span>    <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        a<span class="token operator">++</span>        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token keyword">let</span> f <span class="token operator">=</span> <span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre><h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4></li></ul><ol><li>注意全局变量一直存在于内存中，局部变量执行完之后被垃圾回收（包括函数），再次执行该函数的时候又得重新开始</li><li>闭包的代码复杂的真正原因<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">0</span>    <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        a<span class="token operator">++</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token keyword">let</span> s1 <span class="token operator">=</span> <span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token keyword">let</span> s2 <span class="token operator">=</span> <span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token function">s1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">//1</span><span class="token function">s1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">//2</span><span class="token function">s2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">//3</span></code></pre></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>VsCode中使用git</title>
       <link href="/2021/08/20/vscode-zhong-shi-yong-git/"/>
       <url>/2021/08/20/vscode-zhong-shi-yong-git/</url>
