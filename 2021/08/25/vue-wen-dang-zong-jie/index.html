@@ -1,0 +1,587 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vue2文档总结 | ZJingW's のブログ</title><meta name="keywords" content="前端,Vue2"><meta name="author" content="ZJingW"><meta name="copyright" content="ZJingW"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Vue2文档总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue2文档总结">
+<meta property="og:url" content="https://jingwzeng.github.io/2021/08/25/vue-wen-dang-zong-jie/index.html">
+<meta property="og:site_name" content="ZJingW&#39;s のブログ">
+<meta property="og:description" content="Vue2文档总结">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108251059003.jpg">
+<meta property="article:published_time" content="2021-08-25T07:22:18.000Z">
+<meta property="article:modified_time" content="2021-08-25T12:35:16.458Z">
+<meta property="article:author" content="ZJingW">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="Vue2">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108251059003.jpg"><link rel="shortcut icon" href="https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108232012733.png"><link rel="canonical" href="https://jingwzeng.github.io/2021/08/25/vue-wen-dang-zong-jie/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":300},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Vue2文档总结',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-08-25 20:35:16'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    document.addEventListener('pjax:complete', detectApple)})(window)</script><meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108231635263.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-procedures"></i><span> 生活</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fab fa-stack-exchange"></i><span> 说说</span></a></li><li><a class="site-page child" href="/map/"><i class="fa-fw fas fa-map-marked-alt"></i><span> 地图</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友人帐</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108251059003.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ZJingW's のブログ</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-procedures"></i><span> 生活</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fab fa-stack-exchange"></i><span> 说说</span></a></li><li><a class="site-page child" href="/map/"><i class="fa-fw fas fa-map-marked-alt"></i><span> 地图</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友人帐</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Vue2文档总结<a class="post-edit-link" href="https://github.com/JingWZeng/JingWZeng.github.io/tree/my-blog/source/_posts_posts/Vue文档总结.md" rel="external nofollow noreferrer" title="编辑" target="_blank"><i class="fas fa-pencil-alt"></i></a></h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-08-25T07:22:18.000Z" title="发表于 2021-08-25 15:22:18">2021-08-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-08-25T12:35:16.458Z" title="更新于 2021-08-25 20:35:16">2021-08-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF/Vue2/">Vue2</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Vue2文档总结"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><ol>
+<li><code>data</code>对象所有的属性被加入到Vue的响应式系统(被创建的时候就已经存在才是,临时加入的不是)<br>一开始的声明其实就是让他在创建的时候就存在。如果用如果用<code>Objectfreeze(obj)</code>,阻止<code>obj</code>修改自己的属性,所以响应式系统就不能追踪他的变化</li>
+<li><code>v-once</code>只执行一次插值,当数据改变的时候,插值的内容不会再更新</li>
+<li><code>v-html</code>可以把<code>html</code>代码执行出来,用户提供的信息不要这样用,<code>Xss</code>攻击,只对可信的东西用就好。<code>Xss</code>攻击可以利用<code>Xss</code>库进行配置</li>
+<li>用在<code>html</code>属性上面不可以用<code>{{}}`,需要用`v-bind`的。其实如果`v-bind`的属性是`false`\ `null` \ `undefined`的话,渲染出来的该`html`元素不会含有该属性的。`{{}}</code>和<code>v-bind</code>中都可以放<code>JavaScript</code>表达式,<code>v-bind</code>的属性名会被强制转换成小写,</li>
+<li><code>v-bind</code> 和 <code>v-on</code>的缩写<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">:</span>herf <span class="token operator">=</span> <span class="token string">"ur1"</span>
+<span class="token comment">//动态参對的缩写</span>
+<span class="token operator">:</span><span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"url"</span>
+
+@click <span class="token operator">=</span> <span class="token string">"dosomething"</span>
+@<span class="token punctuation">[</span>event<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"dosomething"</span></code></pre></li>
+<li>计算属性的使用和普通属性一样绑定在<code>html</code>元素上面</li>
+<li>插值可以调用<code>methods</code>里面的方法</li>
+<li>计算属性有缓存,看的是它所对应的依赖是否改变,如果改变才会重新求值,如果没有变化,则不会。<code>methods</code>的话是每次调用都会执行的<pre class="language-javascript" data-language="javascript"><code class="language-javascript">computed<span class="token operator">:</span><span class="token punctuation">{</span>
+    <span class="token function-variable function">now</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">//该属性now不会再更新,因为Date.now ()不是响应式依</span>
+        <span class="token keyword">return</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></li>
+<li>当一些数据需要随着其他数据变动而变动的时候,你特别容易滥用<code>watch</code>,其实用<code>computed</code>会更好一点,<code>computed</code>可以监听到<code>data</code>里面的响应式数据(做为计算属性的依赖之后)</li>
+<li>计算属性默认是只有<code>getter</code>,有需要的时候需要自己提供<code>setter</code>方法来做,就是更改属性的时候调用,做一下事情</li>
+<li><code>watch</code>:当数据变化的时候执行异步或者开销比较大的操作的时候</li>
+<li><code>class</code>和<code>style</code>动态的切换<code>class</code>,<code>class</code>和<code>:class</code>是可以共存在个html元素上面的<pre class="language-css" data-language="css"><code class="language-css"><span class="token punctuation">:</span>class = <span class="token property">obj或者</span><span class="token punctuation">:</span>class=[]
+<span class="token comment">/*这个obj/[]当然可以定义computer的返回值或者data里面
+调用子组件时候使用:class会传入到子组件的class*/</span></code></pre></li>
+<li><code>Vue</code>渲染的时候会复用些相同<code>html</code>标签,有些需求是不可以被复用的,此时可以给该标签或者组件添加<code>key</code>属性,确定唯一性。</li>
+<li><code>v-show</code>渲染的元素是始终存在<code>dom</code>中的,只是控制<code>display</code>的属性切换,<code>v-lf</code>会重复创建和销毁的,<code>v-show</code>不可以用在<code>template</code>中,也不可以<code>v-else</code>搭配使用</li>
+<li><code>v-for="(1,2)"</code>参数1是item,参数2是index.他们两个的位置不可以被改变<br>遍历的是数组的时候<pre class="language-javascript" data-language="javascript"><code class="language-javascript">v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"item of itens"</span>和v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"item of items"</span>效果是一样的</code></pre></li>
+<li><code>v-for</code>被遍历的是对象的时候,<code>v-for="(value,key,index)"</code>第个参数是值,第二个键名,第三个是索引</li>
+<li>嵌套的<code>v-for</code>中不要使用<code>computed</code>方法</li>
+<li>访问原生的JS事件对象的时候,可以使用特殊变量<code>$event</code>作为参数传到方法中</li>
+<li>事件修饰符<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//阻止事件继续传播</span>
+@click<span class="token punctuation">.</span>stop
+<span class="token comment">//提交事件不再加载页面</span>
+@submit<span class="token punctuation">.</span>prevent
+<span class="token comment">//捕获-&gt;目标-&gt;冒泡 内部触发的事件先在外部处理,之后才去内部元素处理</span>
+@click<span class="token punctuation">.</span>capture
+<span class="token comment">//事件自身才会触发</span>
+@click<span class="token punctuation">.</span>self
+<span class="token comment">//阻止所有的点击</span>
+@click<span class="token punctuation">.</span>prevent<span class="token punctuation">.</span>self
+<span class="token comment">//阻止自身的点击</span>
+@click<span class="token punctuation">.</span>self<span class="token punctuation">.</span>prevent
+<span class="token comment">//点击事件只会触发一次</span>
+@click<span class="token punctuation">.</span>once
+<span class="token comment">//不想阻止事件的默认行为,比如滚动事件的滚动行为</span>
+@<span class="token operator">:</span>scroll<span class="token punctuation">.</span>passive</code></pre></li>
+<li>按键修饰符<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//arrowUp/pageDown等</span>
+@keyup<span class="token punctuation">.</span>enter 
+<span class="token comment">//keyCode</span>
+@keyup<span class="token punctuation">.</span><span class="token number">13</span>
+<span class="token comment">//全局定义按键修饰符的名字</span>
+Vue<span class="token punctuation">.</span>config<span class="token punctuation">.</span>keyCodes<span class="token punctuation">.</span>f1 <span class="token operator">=</span> <span class="token number">112</span> <span class="token comment">//@keyup.f1</span>
+<span class="token comment">//兼容老的浏览器,为键盘起的小名</span>
+<span class="token punctuation">.</span>enter<span class="token operator">/</span><span class="token punctuation">.</span>tab<span class="token operator">/</span><span class="token punctuation">.</span>delete<span class="token operator">&lt;</span>删除事件<span class="token operator">/</span>退格键<span class="token operator">&gt;</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">.esc</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">.</span>space<span class="token operator">/</span><span class="token punctuation">.</span>up<span class="token operator">/</span><span class="token punctuation">.</span>down<span class="token operator">/</span><span class="token punctuation">.</span>left<span class="token operator">/</span><span class="token punctuation">.</span>right</code></pre></li>
+<li>系统修饰符:按下响应的键才可以触发鼠标或者其他按键的事件<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token punctuation">.</span>ctrl  <span class="token punctuation">.</span>alt  <span class="token punctuation">.</span>shift <span class="token punctuation">.</span>meta<span class="token operator">&lt;</span>windows图标键<span class="token operator">&gt;</span>
+<span class="token comment">// Alt + C</span>
+@keyup<span class="token punctuation">.</span>alt<span class="token punctuation">.</span><span class="token number">67</span>
+<span class="token comment">//Ctrl + click</span>
+@keyup<span class="token punctuation">.</span>click<span class="token punctuation">.</span>ctrl
+<span class="token comment">//exact精确控制系统修饰符的组合触发的事件</span>
+<span class="token comment">//即使alt、shift被按下,也可以触发,因为按下ctrl+click就可以满足条件</span>
+@click<span class="token punctuation">.</span>ctrl
+<span class="token comment">//有且仅有ctrl被按下才会触发</span>
+@click<span class="token punctuation">.</span>ctrl<span class="token punctuation">.</span>exact
+<span class="token comment">//没有任何系统修饰符按下才会触发</span>
+@click<span class="token punctuation">.</span>exact
+</code></pre></li>
+<li>鼠标修饰符<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token punctuation">.</span>left
+<span class="token punctuation">.</span>right
+<span class="token punctuation">.</span>middle</code></pre></li>
+<li><code>v-model</code>修饰符<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token punctuation">.</span>lazy <span class="token comment">// 只有change事件发生的时候,才会同步数据</span>
+<span class="token punctuation">.</span>number<span class="token comment">//自动将输入的值转number-&gt;parseFloat解析,无法解析的话,返回原始值</span>
+<span class="token punctuation">.</span>trim<span class="token comment">//自动过滤输入的首尾空白字符</span></code></pre></li>
+<li><code>$emit([事件名],args)</code>在父组件中可以通过<code>$event</code>来得到这个<code>args</code>的值</li>
+<li>动态组件用<code>is</code>这个属性</li>
+<li>组件的名字全部小写而且用<code>-</code>字符连接。在非模板字符串中,也就是不在<code>template</code>中,无法使用<code>&lt;myComponent/&gt;</code>,只能写成<code>&lt;my-component/&gt;</code></li>
+<li><code>props['myData']</code>,<code>props</code>中命名是驼峰,<code>html</code>会把它们全部转成<code>kebab-case</code>。比如<code>my-data</code></li>
+<li>事件名用<code>kebab-case</code>,因为<code>html</code>会全部转成小写</li>
+<li><code>props</code>是单向数据流,父亲的数据会更新到儿子那边,所以是响应式的。儿子那边不能修改来自父亲的值,因为父亲更新会改变该值。解决办法:深拷贝一份数据,用来做其他的事情-&gt;分两种情况:</li>
+</ol>
+<ul>
+<li>如果是想把<code>props</code>的值做为子组件本地的数据使用,可以在<code>data</code>里面定义一个变量,把<code>props</code>属性值给该变量</li>
+<li>如果是希望把<code>props</code>里面的值做一个基础的原始值,在子组件中显示的话,可以防止<code>computed</code>中做处理</li>
+</ul>
+<ol start="30">
+<li><code>props</code>做自定义验证<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token number">1.</span> 
+props<span class="token operator">:</span><span class="token punctuation">{</span>
+    foo<span class="token operator">:</span><span class="token punctuation">{</span>
+        <span class="token function-variable function">validator</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token string">'success'</span><span class="token punctuation">,</span><span class="token string">'warining'</span><span class="token punctuation">,</span><span class="token string">'danger'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">indxOf</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token operator">!=</span><span class="token operator">-</span><span class="token number">1</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token number">2.</span>
+props<span class="token operator">:</span><span class="token punctuation">{</span>
+    <span class="token comment">//判断是不是Perosn的实例</span>
+    author<span class="token operator">:</span>Person
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token parameter">firstname<span class="token punctuation">,</span>lastname</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>firstname <span class="token operator">=</span> firstname
+    <span class="token keyword">this</span><span class="token punctuation">.</span>lastname <span class="token operator">=</span> lastname
+<span class="token punctuation">}</span></code></pre></li>
+<li><code>$attrs</code>与 <code>$listens</code><pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//在子组件中使用</span>
+<span class="token number">1</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token number">2</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token number">3</span>
+<span class="token comment">//在2中用</span>
+<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">:$attrs</span><span class="token template-punctuation string">`</span></span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">@listens</span><span class="token template-punctuation string">`</span></span> <span class="token operator">-</span><span class="token operator">&gt;</span>接受<span class="token number">1</span>中没有进入<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">props</span><span class="token template-punctuation string">`</span></span>里面的其他属性和<span class="token number">1</span>的全部方法
+<span class="token comment">//在3中用</span>
+接受<span class="token number">1</span>和<span class="token number">2</span>中没有进入 <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">props</span><span class="token template-punctuation string">`</span></span>里面的其他属性和<span class="token number">1</span>和<span class="token number">2</span>的全部方法</code></pre></li>
+<li>组件的<code>.sync</code>修饰符就是让子组件做改变的时候同步到父组件中,和<code>props</code>传值<code>/$emit</code>中效果一样。组件中使用<code>v-model</code>也可以实现<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>input v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">"something"</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>input <span class="token operator">:</span>value<span class="token operator">=</span><span class="token string">"something"</span> @input<span class="token operator">=</span><span class="token string">"something=$event.target.value"</span><span class="token operator">&gt;</span>
+<span class="token comment">//在组件中使用v-model</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span>title<span class="token punctuation">}</span><span class="token punctuation">}</span>测试用的<span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>  <span class="token comment">//初始的title = '1111'</span>
+<span class="token operator">&lt;</span>Child v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">"title"</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+Vue<span class="token punctuation">.</span><span class="token function">Component</span><span class="token punctuation">(</span><span class="token string">'Child'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+    template<span class="token operator">:</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;div&gt;
+    {{value}}   ------------&gt;用来测试(2),现在显示'1111'
+    &lt;button @click="change()"&gt;按钮&lt;/button&gt;
+    &lt;/div&gt;,
+    props:['value'], 
+    methods:{
+        change(){
+            this.$emit('input','22222') --------------&gt; 一定要触发input事件,点击之后测试(1)/(2)变成'22222'
+        }
+    }
+    </span><span class="token template-punctuation string">`</span></span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></li>
+<li><code>keep-alive</code>可以用来保存切换之后页面的存在状态</li>
+<li><code>filters</code>中用着<code>{{}}/v-bind</code>中,用|隔开,<code>原始值|过滤方法A|过滤方法B</code>,<code>A</code>得到的结果到<code>B</code>。或者<code>value|A(arg1,arg2)</code></li>
+<li>对象和数组,<code>Vue</code>无法检测它们的变化,解决办法:<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token number">1.</span> 对于对象<span class="token operator">--</span><span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token keyword">set</span>向嵌套对象添加响应式的数据
+<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$set</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>obj<span class="token punctuation">,</span><span class="token punctuation">[</span>属性名<span class="token punctuation">]</span><span class="token punctuation">,</span>value<span class="token punctuation">)</span>
+<span class="token comment">//如果是添加多个属性,需要让原对象与要混合的进去的属性组合成一个新的对象</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>someObj <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token keyword">this</span><span class="token punctuation">.</span>someObj<span class="token punctuation">,</span><span class="token punctuation">{</span>a<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>b<span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token number">2.</span> 对于数组<span class="token operator">--</span><span class="token operator">-</span><span class="token operator">&gt;</span>实现vm<span class="token punctuation">.</span>items<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token operator">=</span> newVal的效果<span class="token operator">--</span><span class="token operator">-</span><span class="token operator">&gt;</span>这种不是响应式的<span class="token punctuation">,</span>下面的才是
+<span class="token comment">//set</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$set</span><span class="token punctuation">(</span>vm<span class="token punctuation">.</span>items<span class="token punctuation">,</span>index<span class="token punctuation">,</span>newVal<span class="token punctuation">)</span>
+<span class="token comment">//splice</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>items<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span>newVal<span class="token punctuation">)</span></code></pre></li>
+<li><code>$parent</code>可以访问父亲的<code>data</code>属性,但最好不要这样做。<code>ref</code>给我一个组件的<code>id</code>,通过<code>this.$refs.[id]</code>来访问,refs不是响应式的,所以不应该在模板中或者<code>computed</code>使用</li>
+<li><code>nextTick()</code><pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//tick的意思是一次事件循环-&gt;保证虚拟dom被挂在真是dom之后立刻执行,数据被更新到dom之后立刻执行</span>
+<span class="token number">1.</span> Promise
+methods<span class="token operator">:</span><span class="token punctuation">{</span>
+    <span class="token function">updataMsg</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>msg <span class="token operator">=</span> <span class="token string">'已更新'</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$el<span class="token punctuation">.</span>textContent<span class="token punctuation">)</span> <span class="token comment">//未更新</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$nextTick</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$el<span class="token punctuation">.</span>textContent<span class="token punctuation">)</span><span class="token comment">//已更新</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token number">2.</span>Async<span class="token operator">/</span>Await
+methods<span class="token operator">:</span><span class="token punctuation">{</span>
+   <span class="token keyword">async</span> <span class="token function">updataMsg</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>msg <span class="token operator">=</span> <span class="token string">'已更新'</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$el<span class="token punctuation">.</span>textContent<span class="token punctuation">)</span> <span class="token comment">//未更新</span>
+        <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$nextTick
+       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$el<span class="token punctuation">.</span>textContent<span class="token punctuation">)</span><span class="token comment">//已更新</span>
+    
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined" rel="external nofollow noreferrer">ZJingW</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://jingwzeng.github.io/2021/08/25/vue-wen-dang-zong-jie/">https://jingwzeng.github.io/2021/08/25/vue-wen-dang-zong-jie/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://jingwzeng.github.io" target="_blank">ZJingW's のブログ</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a><a class="post-meta__tags" href="/tags/Vue2/">Vue2</a></div><div class="post_share"><div class="social-share" data-image="https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108251059003.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108231633634.png" rel="external nofollow noreferrer" target="_blank"><img class="post-qr-code-img" src="https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108231633634.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108231633182.png" rel="external nofollow noreferrer" target="_blank"><img class="post-qr-code-img" src="https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108231633182.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/08/25/wo-de-vue-config-js-pei-zhi/"><img class="prev-cover" src="https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108251059004.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">我的vue.config.js配置</div></div></a></div><div class="next-post pull-right"><a href="/2021/08/25/hexo/"><img class="next-cover" src="https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108232032968.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">hexo 使用教程</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/08/24/vue-router-wen-dang-zong-jie/" title="Vue-Router文档总结"><img class="cover" src="https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108242038833.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-24</div><div class="title">Vue-Router文档总结</div></div></a></div><div><a href="/2021/08/25/vuex-wen-dang-zong-jie/" title="Vuex文档总结"><img class="cover" src="https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108251059002.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-25</div><div class="title">Vuex文档总结</div></div></a></div><div><a href="/2021/08/24/vue-sheng-ming-zhou-qi-zong-jie/" title="Vue生命周期总结"><img class="cover" src="https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108242038832.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-24</div><div class="title">Vue生命周期总结</div></div></a></div><div><a href="/2021/08/24/vue-xiang-mu-zhong-wen-ti/" title="Vue项目中问题"><img class="cover" src="https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108242038830.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-24</div><div class="title">Vue项目中问题</div></div></a></div><div><a href="/2021/08/25/wo-de-vue-config-js-pei-zhi/" title="我的vue.config.js配置"><img class="cover" src="https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108251059004.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-25</div><div class="title">我的vue.config.js配置</div></div></a></div><div><a href="/2021/08/20/bom-zhi-shi-zong-jie/" title="Bom知识总结"><img class="cover" src="https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108232032965.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-20</div><div class="title">Bom知识总结</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108231635263.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">ZJingW</div><div class="author-info__description">一处记录生活的地方</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/JingWZeng"><i class="fab fa-github"></i><span>Github</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/JingWZeng" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/3117005065@mail2.gdut.edu.cn" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">这是我的博客小站</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/08/25/hexo/" title="hexo 使用教程"><img src="https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108232032968.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo 使用教程"/></a><div class="content"><a class="title" href="/2021/08/25/hexo/" title="hexo 使用教程">hexo 使用教程</a><time datetime="2021-08-25T12:35:16.458Z" title="发表于 2021-08-25 20:35:16">2021-08-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/08/25/vue-wen-dang-zong-jie/" title="Vue2文档总结"><img src="https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108251059003.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vue2文档总结"/></a><div class="content"><a class="title" href="/2021/08/25/vue-wen-dang-zong-jie/" title="Vue2文档总结">Vue2文档总结</a><time datetime="2021-08-25T07:22:18.000Z" title="发表于 2021-08-25 15:22:18">2021-08-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/08/25/wo-de-vue-config-js-pei-zhi/" title="我的vue.config.js配置"><img src="https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108251059004.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我的vue.config.js配置"/></a><div class="content"><a class="title" href="/2021/08/25/wo-de-vue-config-js-pei-zhi/" title="我的vue.config.js配置">我的vue.config.js配置</a><time datetime="2021-08-25T07:22:02.000Z" title="发表于 2021-08-25 15:22:02">2021-08-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/08/25/vuex-wen-dang-zong-jie/" title="Vuex文档总结"><img src="https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108251059002.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vuex文档总结"/></a><div class="content"><a class="title" href="/2021/08/25/vuex-wen-dang-zong-jie/" title="Vuex文档总结">Vuex文档总结</a><time datetime="2021-08-25T02:57:40.000Z" title="发表于 2021-08-25 10:57:40">2021-08-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/08/24/web-cun-chu/" title="Web存储"><img src="https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108242155243.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Web存储"/></a><div class="content"><a class="title" href="/2021/08/24/web-cun-chu/" title="Web存储">Web存储</a><time datetime="2021-08-24T13:53:06.000Z" title="发表于 2021-08-24 21:53:06">2021-08-24</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108251059003.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2021 By ZJingW</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">欢迎来的我的博客小站</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'UMfaB6cgmg5xQ2ywLsLLrGTx-MdYXbMMI',
+      appKey: 'nUShiWBtXr05l5wRY8blFrBO',
+      placeholder: '记得留下你的暱称和邮箱....可以快速收到回復',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+      requiredFields: ["nick,mail"],
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.17.0/js/md5.min.js"></script><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getIcon = (icon, mail) => {
+    if (icon) return icon
+    let defaultIcon = '?d=monsterid'
+    let iconUrl = `https://gravatar.loli.net/avatar/${md5(mail.toLowerCase()) + defaultIcon}`
+    return iconUrl
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getComment = () => {
+    const serverURL = 'https://UMfaB6cg.api.lncldglobal.com'
+
+    var settings = {
+      "method": "GET",
+      "headers": {
+        "X-LC-Id": 'UMfaB6cgmg5xQ2ywLsLLrGTx-MdYXbMMI',
+        "X-LC-Key": 'nUShiWBtXr05l5wRY8blFrBO',
+        "Content-Type": "application/json"
+      },
+    }
+
+    fetch(`${serverURL}/1.1/classes/Comment?limit=6&order=-createdAt`,settings)
+      .then(response => response.json())
+      .then(data => {
+        const valineArray = data.results.map(function (e) {
+          return {
+            'avatar': getIcon(e.QQAvatar, e.mail),
+            'content': changeContent(e.comment),
+            'nick': e.nick,
+            'url': e.url + '#' + e.objectId,
+            'date': e.updatedAt,
+          }
+        })
+        saveToLocal.set('valine-newest-comments', JSON.stringify(valineArray), 10/(60*24))
+        generateHtml(valineArray)
+      }).catch(e => {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      }) 
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('valine-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><div class="aplayer no-destroy" data-id="000PeZCQ1i4XVs" data-server="tencent" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/6fc22659.js","daovoice")
+</script><script>var isChatBtn = false
+daovoice('init', {
+  app_id: '6fc22659',},{
+  launcher: { 
+     disableLauncherIcon: isChatBtn // 悬浮 ICON 是否显示
+  },
+});
+daovoice('update');
+
+if (isChatBtn) {
+  var chatBtnFn = () => {
+    var chatBtn = document.getElementById("chat_btn")
+    chatBtn.addEventListener("click", function(){
+      daovoice('show')
+    });
+  }
+  chatBtnFn()
+} else {
+  if (false) {
+    function chatBtnHide () {
+      daovoice('update', {},{
+        launcher: { 
+        disableLauncherIcon: true // 悬浮 ICON 是否显示
+        },
+      });
+    }
+    function chatBtnShow () {
+      daovoice('update', {},{
+        launcher: { 
+        disableLauncherIcon: false // 悬浮 ICON 是否显示
+        },
+      });
+    }
+  }
+}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/music/"]):not([href="/no-pjax/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.removeEventListener('scroll', window.tocScrollFn)
+  window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
