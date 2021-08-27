@@ -73,7 +73,7 @@ v-for="item of itens"和v-for="item of items"效果是一样的
 //点击事件只会触发一次
 @click.once
 //不想阻止事件的默认行为,比如滚动事件的滚动行为
-@:scroll.passive
+@:scroll.passive //--->不阻止默认事件的发生
 ```
 20. 按键修饰符
 ```javascript

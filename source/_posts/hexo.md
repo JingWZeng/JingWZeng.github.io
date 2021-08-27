@@ -30,4 +30,6 @@ git push origin master:my-blog
 :smile: :confounded: :fearful: :cold_sweat: :persevere:
 表情包代码地址:https://www.webfx.com/tools/emoji-cheat-sheet/#tabs-3
 
+:ng:  :eight::a:
+:blush:
 
