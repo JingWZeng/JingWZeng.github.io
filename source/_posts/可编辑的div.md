@@ -14,7 +14,7 @@ categories:
 ---
 如果利用`textarea`的输入框，只能输入文本，无法输入图片等。比较好的方法是利用可编辑的`div`进行实现。
 
-##### div的可编辑
+### div的可编辑
 `div`要完成可编辑，只需要设置`contenteditable = "true"`即可实现。我们可以监听用户输入的区域,用户输入的时候，获取其中的`innerText`，之后进行字数的限制判断，重新设置其`innerHtML`，超出的字数显示成其他颜色。在提交之前，对表单进行预验证，要求用户删除多余的字符，方可提交给后端。
 
 :dango:可编辑的`div`的难点在于光标难于控制，因此设置`html`的时候利用两层`div`重叠的方式进行解决
@@ -133,4 +133,14 @@ handleDrop(e){
     }
     }
 }
+
+```
+:grapes:**bug6:`formData`传输多个文件**
+```javascript
+let formData = new FormData()
+for(let i = 0;i<fileObj.length;i++){
+    formData.append('file[]',fileObj[i])
+}
+
+// 不可以直接console.log(formData)---->需要利用formData.get([key])
 ```
