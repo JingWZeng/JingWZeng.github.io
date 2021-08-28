@@ -323,7 +323,7 @@
       <link href="/2021/08/24/c-s-shu-ju-ji-ben-guo-cheng/"/>
       <url>/2021/08/24/c-s-shu-ju-ji-ben-guo-cheng/</url>
       
-        <content type="html"><![CDATA[<blockquote><p>一次http请求至少进行两次的数据转换,发送请求的时候一次,获取响应数据的时候一次</p></blockquote><table><thead><tr><th>顺序</th><th>层名</th><th>格式</th></tr></thead><tbody><tr><td>1</td><td>应用层</td><td>数据</td></tr><tr><td>2</td><td>传输层</td><td>数据+源端口+目标端口</td></tr><tr><td>3</td><td>网络层</td><td>数据+源端口+目标端口+源IP+目标IP</td></tr><tr><td>4</td><td>链路层</td><td>转换成数字信息进行传输</td></tr></tbody></table><h4 id="从客户端-1-gt-2-gt-3-gt-4"><a href="#从客户端-1-gt-2-gt-3-gt-4" class="headerlink" title="从客户端 1->2->3->4"></a>从客户端 1-&gt;2-&gt;3-&gt;4</h4><h4 id="从服务端-4-gt-3-gt-2-gt-1"><a href="#从服务端-4-gt-3-gt-2-gt-1" class="headerlink" title="从服务端 4->3->2->1"></a>从服务端 4-&gt;3-&gt;2-&gt;1</h4>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>一次http请求至少进行两次的数据转换,发送请求的时候一次,获取响应数据的时候一次</p></blockquote><table><thead><tr><th>顺序</th><th>层名</th><th>格式</th></tr></thead><tbody><tr><td>1</td><td>应用层</td><td>数据</td></tr><tr><td>2</td><td>传输层</td><td>数据+源端口+目标端口</td></tr><tr><td>3</td><td>网络层</td><td>数据+源端口+目标端口+源IP+目标IP</td></tr><tr><td>4</td><td>链路层</td><td>转换成数字信息进行传输</td></tr></tbody></table><h4 id="从客户端-1-gt-2-gt-3-gt-4"><a href="#从客户端-1-gt-2-gt-3-gt-4" class="headerlink" title="从客户端 1->2->3->4"></a>从客户端 1-&gt;2-&gt;3-&gt;4</h4><h4 id="从服务端-4-gt-3-gt-2-gt-1"><a href="#从服务端-4-gt-3-gt-2-gt-1" class="headerlink" title="从服务端 4->3->2->1"></a>从服务端 4-&gt;3-&gt;2-&gt;1</h4><p><img src="https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108281639138.gif" alt="1441607086266971"></p>]]></content>
       
       
       <categories>
