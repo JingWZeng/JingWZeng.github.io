@@ -26,3 +26,4 @@ categories:
 
 #### 从服务端 4->3->2->1
 
+![1441607086266971](https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108281639138.gif)

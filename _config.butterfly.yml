@@ -589,7 +589,7 @@ ClickShowText:
 
 # Default display mode (網站默認的顯示模式)
 # light (default) / dark
-display_mode: light
+display_mode: dark
 
 # Beautify (美化頁面顯示)
 beautify:
@@ -852,6 +852,7 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
+    - <link rel="stylesheet" href="lantern/dl.css">
     - '<style type="text/css">#aside-content.aside-content > .sticky_layout > .card-widget.card-clock > .card-glass > .card-background {margin: 0px}</style>'
   bottom:
     - <div class="aplayer no-destroy" data-id="000PeZCQ1i4XVs" data-server="tencent" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div>
