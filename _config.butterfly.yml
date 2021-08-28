@@ -9,7 +9,7 @@
 menu:
   首页: / || fas fas fa-igloo
   生活||fas fa-procedures:
-    说说: /artitalk/ || fab fa-stack-exchange
+    哔哔闪念: /artitalk/ || fab fa-stack-exchange
     地图: /map/ || fas fa-map-marked-alt
   时间轴: /archives/ || fas fa-hourglass-end
   标签: /tags/ || fas fa-tags
@@ -650,7 +650,7 @@ aside:
   hide: false
   button: true
   mobile: true # display on mobile
-  position: left # left or right
+  position: right # left or right
   card_author:
     enable: true
     description:
@@ -690,6 +690,8 @@ aside:
     post_count: true
     last_push_date: true
     sort_order: # Don't modify the setting unless you know how it works
+  card_weibo:
+    enable: true
 
 # busuanzi count for PV / UV in site
 # 訪問人數
@@ -873,35 +875,23 @@ charts:
 electric_clock:
   enable: true # 开关
   priority: 5 #过滤器优先权
-  enable_page: all # 应用页面
-  exclude:
-    - /posts/
-    - /about/
+  enable_page: / # 应用页面
+  # exclude:
+  #   - /posts/
+  #   - /about/
   layout: # 挂载容器类型
     type: class
     name: sticky_layout
     index: 0
   loading: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108281153214.gif #加载动画自定义
 
-# hexo-butterfly-swiper
-# see https://akilar.top/posts/8e1264d1/
-swiper:
-  enable: true # 开关
-  priority: 5 #过滤器优先权
-  enable_page: all # 应用页面
-  timemode: date #date/updated
-  layout: # 挂载容器类型
-    type: id
-    name: recent-posts
-    index: 0
-  default_descr: 再怎么看我也不知道怎么描述它的啦！
-  custom_css: https://cdn.jsdelivr.net/npm/swiper@4.1.6/dist/css/swiper.min.css #自定义swiper css依赖
-  custom_js: https://cdn.jsdelivr.net/npm/swiper@4.1.6/dist/js/swiper.min.js #自定义swiper js依赖
   
 # CDN
 # Don't modify the following settings unless you know how they work
 # 非必要請不要修改
 CDN:
+  card_weibo: https://cdn.jsdelivr.net/gh/Eurkon/CDN/hexo/js/card_weibo.js # 或者填写自己的 js 地址
+
   # main
   main_css: /css/index.css
   jquery: https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js

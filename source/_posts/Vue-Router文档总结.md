@@ -4,6 +4,9 @@ date: 2021-08-24 21:25:08
 description: Vue-Router文档总结
 cover: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108242038833.png
 top_img: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108242038833.png
+swiper_index: 1
+swiper_desc: Vue-Router文档总结
+swiper_cover: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108242038833.png
 tags: 
  - 前端
  - Vue2

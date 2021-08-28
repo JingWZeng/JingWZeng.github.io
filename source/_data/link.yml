@@ -1,24 +1,63 @@
-- class_name: 友情链接
-  class_desc: 那些人，那些事
+- class_name: 我的网站 🎉🎉
+  class_desc: 成年人当然全都要
   link_list:
-    - name: Hexo
-      link: https://hexo.io/zh-tw/
-      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
-      descr: 快速、简单且强大的网誌框架
+    - name: ZJingW's のブログ
+      link: https://jingwzeng.github.io/
+      avatar: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108231635263.jpeg
+      descr: 本站 Hexo 版
 
-- class_name: 网站
+- class_name: 友情链接 👋👋
+  class_desc: 天下快意之事莫若友，快友之事莫若谈。
+  link_list:
+    - name: 小冰博客
+      link: https://zfe.space/
+      avatar: https://cdn.guole.fun/logo/g1eny0ung.jpg
+      descr: 特别多实用的butterfly插件
+    - name: realyao
+      link: https://realyao.me/
+      avatar: https://cdn.guole.fun/logo/realyao.png
+      descr: 其个人 Blog 吸引我接触前端
+    - name: MYW
+      link: https://immyw.com/
+      avatar: https://immyw.com/img/avatar.png
+      descr: 当前看到的本站主题作者
+    - name: iMaeGoo
+      link: https://www.imaegoo.com/
+      avatar: https://cdn.guole.fun/logo/虹墨.jpg
+      descr: Twikoo 功能作者
+    - name: 黑石博客
+      link: https://www.heson10.com/
+      avatar: https://cdn.guole.fun/logo/黑石.png
+      descr: BBtalk 功能作者
+    - name: 木木木木木
+      link: https://immmmm.com/
+      avatar: https://cdn.guole.fun/logo/木木木.jpg
+      descr: Bber 功能作者
+    - name: 小康博客
+      link: https://www.antmoe.com/
+      avatar: https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/avatar.jpg
+      descr: 一个收藏回忆与分享技术的地方！
+
+# - class_name: 现实中的好PY 🤝🤝
+#   class_desc: 
+#   link_list:
+#     - name: Sakura
+#       link: https://www.hanz.vip/
+#       avatar: https://cdn.guole.fun/logo/sakura.jpg
+#       descr: 朋友，PHP 开发，唱歌贼好听
+#     - name: 大西瓜
+#       link: http://bikabi.cn/
+#       avatar: https://cdn.guole.fun/logo/大西瓜.png
+#       descr: 朋友，前端开发，羽毛球贼厉害
+
+- class_name: 推荐网站 ✌✌
   class_desc: 值得推荐的网站
   link_list:
-    - name: Youtube
-      link: https://www.youtube.com/
-      avatar: https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png
-      descr: 视频网站
-    - name: Weibo
-      link: https://www.weibo.com/
-      avatar: https://i.loli.net/2020/05/14/TLJBum386vcnI1P.png
-      descr: 中国最大社交分享平台
-    - name: Twitter
-      link: https://twitter.com/
-      avatar: https://i.loli.net/2020/05/14/5VyHPQqR6LWF39a.png
-      descr: 社交分享平台
-
+    - name: Hexo
+      link: https://hexo.io/zh-cn/
+      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
+      descr: 快速、简单且强大的网页框架
+    - name: Butterfly
+      link: https://butterfly.js.org/
+      avatar: https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-github-avatar.png
+      descr: 本站主题，真好看
