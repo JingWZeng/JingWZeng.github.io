@@ -214,3 +214,20 @@ magnet:
     index: 0
   temple_html: '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet">${temple_html_item}</div></div>'
   plus_style: ""
+
+live2d:
+  enable: true
+  scriptFrom: local # 默认
+  tagMode: false # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中
+  debug: false # 调试, 是否在控制台输出日志
+  model:
+    use: live2d-widget-model-miku  #模型选择
+  display:
+    position: right  #模型位置
+    width: 150       #模型宽度
+    height: 300      #模型高度
+    hOffset: 50
+    vOffset: -50
+  mobile:
+    show: false      #是否在手机端显示
+

@@ -9,6 +9,10 @@
 - class_name: 友情链接 👋👋
   class_desc: 天下快意之事莫若友，快友之事莫若谈。
   link_list:
+    - name: Ethan.Tzy
+      link: https://ethant.top/
+      avatar: https://cdn.jsdelivr.net/gh/tzy13755126023/BLOG_SOURCE/theme_f/avater.jpg
+      descr: 学习与交流的乐园，希望能和你成为好朋友。
     - name: 小冰博客
       link: https://zfe.space/
       avatar: https://cdn.guole.fun/logo/g1eny0ung.jpg
