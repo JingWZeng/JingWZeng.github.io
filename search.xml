@@ -5,8 +5,8 @@
     
     <entry>
       <title>hexo 使用教程</title>
-      <link href="/2021/08/28/hexo/"/>
-      <url>/2021/08/28/hexo/</url>
+      <link href="/2021/08/31/hexo/"/>
+      <url>/2021/08/31/hexo/</url>
       
         <content type="html"><![CDATA[<h3 id="新建一篇博客"><a href="#新建一篇博客" class="headerlink" title="新建一篇博客"></a>新建一篇博客</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><h3 id="提交修改到my-blog上"><a href="#提交修改到my-blog上" class="headerlink" title="提交修改到my-blog上"></a>提交修改到my-blog上</h3><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span><span class="token function">git</span> commit -m <span class="token string">"msg"</span><span class="token function">git</span> push origin master:my-blog</code></pre><h3 id="自动开启自动化部署"><a href="#自动开启自动化部署" class="headerlink" title="自动开启自动化部署"></a>自动开启自动化部署</h3><pre class="language-bash" data-language="bash"><code class="language-bash">打开https://jingwzeng.github.io就可以自动部署</code></pre><h3 id="表情包"><a href="#表情包" class="headerlink" title="表情包"></a>表情包</h3><p><span class="github-emoji"><span>😄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> <span class="github-emoji"><span>😖</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f616.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> <span class="github-emoji"><span>😨</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f628.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> <span class="github-emoji"><span>😰</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f630.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> <span class="github-emoji"><span>😣</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f623.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><br>表情包代码地址:<a href="https://www.webfx.com/tools/emoji-cheat-sheet/#tabs-3">https://www.webfx.com/tools/emoji-cheat-sheet/#tabs-3</a></p><p><span class="github-emoji"><span>🆖</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f196.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>  <span class="github-emoji"><span>8⃣</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/0038-20e3.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji"><span>🅰</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f170.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><br><span class="github-emoji"><span>😊</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f60a.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>]]></content>
       
@@ -21,6 +21,46 @@
         <tags>
             
             <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>测试功能页</title>
+      <link href="/2021/08/31/ce-shi-gong-neng-ye/"/>
+      <url>/2021/08/31/ce-shi-gong-neng-ye/</url>
+      
+        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="38f3f22ee21db3680ba53f48b6e1b240efd52229d75f4c99c5bcab51b59f7669">bd25ed9264b080267271e137e33d0ce1874c72b7e3d7ffc49271f9d090e14bb8e7eeef201904066dc5fec581483b6f5b230759b47f327056f2c6087fb4372224ff41dd6a14a51a6f9c19a545b59bb412952ce03ecc8be9d6c47f8d0ee5714a97ce39d1a3050947b9f06c60dbb003869079b26abe7da67db1da28532cb1d35841be69ec6ddfe28bdcab1b34104726ee29f7d23b13cab0b9c924973d25e49b211cf467d4bdf99881bce00692fa10a01be08aff185b49104633183b9060185aafc7ac146a6e5fd2ae7c7b4a277a599d853ccb3bee614272cf7e81bbaff8829d5b77bdbec1568eefe7a02bfd3ef2533380d0bd2993ada136b49b7b8582773bb3fe7f8e98f20c7fe67ba1d5611ecc2d6bc19b1ba1d87e7b1cccbb0f3450f37ae298ca84037710c4a2daea768f8c60d5e6588d4de4e079b5369d91c9fd5d9423bf5588c1d4279ac486baaeeee09567b8c018b7ca43bafe735adeb76b9b798c3aaa86066540f0b64e42bb1bd42f8365f293011b085ce74b79cf1b23bbc66dda6ebf3d9a19f7216da231095cfd3cd45945daa958f9960c994542c51b2975852b5f5a9058e13acfb0a4635a9de1c6aefc05e1ce9c</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">测试加密，这里的密码是：test</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>github配置cdn注意事项</title>
+      <link href="/2021/08/31/github-pei-zhi-cdn-zhu-yi-shi-xiang/"/>
+      <url>/2021/08/31/github-pei-zhi-cdn-zhu-yi-shi-xiang/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Github-CDN-Jsdelivr"><a href="#Github-CDN-Jsdelivr" class="headerlink" title="Github+CDN+Jsdelivr"></a>Github+CDN+Jsdelivr</h3><p><code>github</code>上新建个仓库存放这些需要<code>cdn</code>加速的资源。在<code>Releases</code>中创建<code>cdn</code>加速。图中<code>Choose a tag</code> 就是版本号,通过链接<code>https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN@1.0/img/</code>访问<code>cdn</code>加速的文件夹,<code>https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN@1.0/img/[文件名]</code>访问具体的文件。<br><img src="https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202108310924643.png"><br><img src="https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202108310920130.png"></p><p><code>picGo</code>如果需要利用<code>cdn</code>加速的话，只需要把默认地址设置成<code>https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg</code>。<code>markdownImg</code>是我的仓库名<br><img src="https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202108310931535.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> github </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> github </tag>
+            
+            <tag> cdn </tag>
             
         </tags>
       
