@@ -2,8 +2,8 @@
 title: C-S数据基本过程
 date: 2021-08-24 19:57:39
 description: Web开发浏览器的过程数据格式
-cover: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108231626416.jpg
-top_img: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108231626416.jpg
+cover: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109011607381.jpg
+top_img: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109011607381.jpg
 tags: 
  - 前端
  - 浏览器
@@ -26,4 +26,3 @@ categories:
 
 #### 从服务端 4->3->2->1
 
-![1441607086266971](https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108281639138.gif)

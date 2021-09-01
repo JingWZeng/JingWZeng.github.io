@@ -8,6 +8,6 @@ type: 'link'
 ```yaml
     - name: ZJingW's のブログ
       link: https://jingwzeng.github.io/
-      avatar: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108231635263.jpeg
+      avatar: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202108231635263.jpeg
       descr: 本站 Hexo 版
 ```

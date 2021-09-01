@@ -2,11 +2,11 @@
 title: Vue2文档总结
 date: 2021-08-25 15:22:18
 description: Vue2文档总结
-cover: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108251059003.jpg
-top_img: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108251059003.jpg
+cover: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109011607375.jpg
+top_img: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109011607375.jpg
 swiper_index: 4
 swiper_desc: Vue2文档总结
-swiper_cover: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108251059003.jpg
+swiper_cover: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109011607375.jpg
 tags: 
  - 前端
  - Vue2

@@ -2,11 +2,11 @@
 title: Vue生命周期总结
 date: 2021-08-24 21:45:54
 description: Vue生命周期文档总结
-cover: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108242038832.jpg
-top_img: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108242038832.jpg
+cover: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109011607376.jpg
+top_img: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109011607376.jpg
 swiper_index: 3
 swiper_desc: Vue生命周期文档总结
-swiper_cover: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108242038832.jpg
+swiper_cover: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109011607376.jpg
 tags: 
  - 前端
  - Vue2

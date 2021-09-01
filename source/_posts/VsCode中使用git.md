@@ -3,8 +3,8 @@ title: VsCode中使用git
 date: 2021-08-20 17:24:49
 description: VsCode中操作图形化操作Git
 sticky: 1
-cover: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108232032970.jpg
-top_img: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108232032970.jpg
+cover: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109011607378.jpg
+top_img: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109011607378.jpg
 tags: 
  - VsCode
  - Git

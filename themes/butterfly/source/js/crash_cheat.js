@@ -10,7 +10,7 @@ btf.isJqueryLoad(function(){
             clearTimeout(titleTime);
         }
         else {
-            $('[rel="icon"]').attr('href', "https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108232012733.png");
+            $('[rel="icon"]').attr('href', "https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202108232012733.png");
             document.title = '(ฅ>ω<*ฅ) 客官欢迎回来~';
             titleTime = setTimeout(function () {
                 document.title = OriginTitle;

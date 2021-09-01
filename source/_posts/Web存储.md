@@ -2,8 +2,8 @@
 title: Web存储
 date: 2021-08-24 21:53:06
 description: Vue项目中遇到的一些问题
-cover: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108242155243.jpg
-top_img: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108242155243.jpg
+cover: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109011607373.jpg
+top_img: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109011607373.jpg
 tags: 
  - 前端
  - 浏览器

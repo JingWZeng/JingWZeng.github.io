@@ -2,8 +2,8 @@
 title: butterfly的Tag-Plugins
 date: 2021-08-26 09:15:53
 description: JavaScript的闭包
-cover: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108232115854.png
-top_img: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108232115854.png
+cover: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109011607382.jpg
+top_img: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109011607382.jpg
 tags: 
  - 前端
  - JavaScript

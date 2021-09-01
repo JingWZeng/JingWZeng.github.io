@@ -2,8 +2,8 @@
 title: 可编辑的div
 date: 2021-08-27 19:37:48
 description: 可编辑的div，包括字数统计与限制,放置可拖动图片,利用el-form做验证和图片与字符混合提交给后端
-cover: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108271942617.jpg
-top_img: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108271942617.jpg
+cover: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109011607384.jpg
+top_img: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109011607384.jpg
 tags: 
  - 前端
  - 可编辑的div

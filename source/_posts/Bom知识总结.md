@@ -4,8 +4,8 @@ date: 2021-08-20 17:18:39
 author: ZJingW
 categories: BOM
 description: 浏览器的API的知识笔记
-top_img: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108232032965.jpg
-cover: https://raw.githubusercontent.com/JingWZeng/markdownImg/main/img/202108232032965.jpg
+top_img: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109011607383.png
+cover: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109011607383.png
 tags: 
  - BOM
  - 前端
