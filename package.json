@@ -21,6 +21,7 @@
     "hexo-butterfly-douban": "^1.2.4",
     "hexo-butterfly-envelope": "^1.0.7",
     "hexo-deployer-git": "^3.0.0",
+    "hexo-filter-gitcalendar": "^1.0.6",
     "hexo-filter-github-emojis": "^3.0.4",
     "hexo-filter-nofollow": "^2.0.2",
     "hexo-generator-archive": "^1.0.0",
