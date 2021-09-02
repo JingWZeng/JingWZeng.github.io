@@ -4,19 +4,6 @@
   
     
     <entry>
-      <title></title>
-      <link href="/2021/09/02/untitled-1/"/>
-      <url>/2021/09/02/untitled-1/</url>
-      
-        <content type="html"><![CDATA[function baz(){    //当前调用栈是 baz    //调用位置是全局作用域    console.log("baz")    // bar调用位置baz    bar()  }  function bar(){    // 调用栈 baz - bar    // 调用位置是在brz    console.log("bar")    foo()  }  function foo(){    console.log('foo')  }  baz()]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>hexo 使用教程</title>
       <link href="/2021/09/02/hexo/"/>
       <url>/2021/09/02/hexo/</url>
