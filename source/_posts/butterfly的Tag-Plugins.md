@@ -4,13 +4,9 @@ date: 2021-08-26 09:15:53
 description: JavaScript的闭包
 cover: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109011607382.jpg
 top_img: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109011607382.jpg
-tags: 
- - 前端
- - JavaScript
+tags: Butterfly
 author: ZJingW
-categories: 
- - 前端
- - JavaScript
+categories: Butterfly
 ---
 ```butterFly-Tag
 {% note red 'fas fa-fan' flat%}

@@ -274,7 +274,7 @@ gitcalendar:
   #   index: 0
   user: JingWZeng #git用户名
   # https://gitcalendar.akilar.top
-  apiurl: 'https://calendar-api-h7hjn7gan-jingwzeng.vercel.app/'
+  apiurl: 'https://calendar-api-h7hjn7gan-jingwzeng.vercel.app'
   minheight:
     pc: 280px #桌面端最小高度
     mibile: 0px #移动端最小高度
