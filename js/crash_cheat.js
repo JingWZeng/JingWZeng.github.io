@@ -2,7 +2,8 @@
  var OriginTitle = document.title;
  var titleTime;
 
-btf.isJqueryLoad(function(){
+btf.isJqueryLoad(
+    function(){
     document.addEventListener('visibilitychange', function () {
         if (document.hidden) {
             $('[rel="icon"]').attr('href', "/LightCycle.ico");
@@ -17,4 +18,5 @@ btf.isJqueryLoad(function(){
             }, 2000);
         }
     });
-})
+}
+)
