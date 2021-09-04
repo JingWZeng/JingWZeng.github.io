@@ -862,7 +862,7 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="lantern/dl.css">
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN@1.6/css/global.min.css">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN@1.8/css/global.min.css">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN/css/lantern.min.css">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN/css/heart.min.css">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN/css/bilibili.min.css">
