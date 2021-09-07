@@ -1553,6 +1553,12 @@ img:not([src]) {
 .img-alt:hover {
   text-decoration: none !important;
 }
+.aplayer-list {
+  max-height: 800px !important;
+}
+.aplayer-list ol {
+  max-height: 800px !important;
+}
 :root {
   --hl-color: #eff;
   --hl-bg: #212121;
