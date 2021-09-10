@@ -4,7 +4,7 @@
     - name: Ethan.Tzy
       link: https://ethant.top/
       avatar: https://cdn.jsdelivr.net/gh/tzy13755126023/BLOG_SOURCE/theme_f/avater.jpg
-      descr: 学习与交流的乐园，希望能和你成为好朋友。
+      descr: 学习与交流的乐园，希望能和你成为好朋友
     - name: 小冰博客
       link: https://zfe.space/
       avatar: https://cdn.guole.fun/logo/g1eny0ung.jpg
@@ -22,5 +22,9 @@
       avatar: https://akilar.top/img/siteicon/favicon.png
       descr: 期待您的光临！
       siteshot: https://cdn.jsdelivr.net/gh/Akilarlxh/ScreenShot@gh-pages/akilar.top.jpg
+    - name: 飞鸟
+      link: https://lzxjack.top/
+      avatar: https://jack-img.oss-cn-hangzhou.aliyuncs.com/img/20201204121004.jpg
+      descr: 一只平凡的鸟罢了
 
 

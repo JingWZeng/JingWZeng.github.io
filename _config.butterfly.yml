@@ -895,14 +895,14 @@ electric_clock:
 # Don't modify the following settings unless you know how they work
 # 非必要請不要修改
 CDN:
-  card_weibo: https://cdn.jsdelivr.net/gh/Eurkon/CDN/hexo/js/card_weibo.js # 或者填写自己的 js 地址
+  card_weibo: https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN@1.9/js/weibo.js 
 
   # main
   main_css: /css/index.css
   jquery: https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js
   main: /js/main.js
   utils: /js/utils.js
-  runtime: https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN/js/runtime.js
+  runtime: https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN@2.0/js/runtime.js
 
   # pjax
   pjax: https://cdn.jsdelivr.net/npm/pjax/pjax.min.js
