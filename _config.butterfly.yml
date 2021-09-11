@@ -9,19 +9,39 @@
 menu:
   首页: / || fas fas fa-igloo
   生活||fas fa-procedures:
-    哔哔闪念: /artitalk/ || fab fa-stack-exchange
     音乐: /music/ || fas fa-music
     电影: /movies/ || fas fa-video
     地图: /map/ || fas fa-map-marked-alt
-    留言: /comments/ || fas fa-comments-dollar
   时间轴: /archives/ || fas fa-hourglass-end
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-battery-half
+  留言: /comments/ || fas fa-comments-dollar
+  哔哔闪念: /artitalk/ || fab fa-stack-exchange
   友人帐: /link/ || fas fa-anchor
   关于我: /about/ || far fa-address-card
 
 # Hide the child menu items in mobile sidebar
 hide_sidebar_menu_child: false
+
+# Inject
+# Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
+# 插入代码到头部 </head> 之前 和 底部 </body> 之前
+inject:
+  head:
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN@1.8/css/global.min.css"/>
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN/css/lantern.min.css"/>
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN/css/heart.min.css"/>
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN/css/bilibili.min.css"/>
+    - <link rel="stylesheet" href="//at.alicdn.com/t/font_2780023_w0hzj9g6qps.css">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN/css/titleCat.min.css"/>
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN/css/coin.min.css"/>
+    - '<style type="text/css">#aside-content.aside-content > .sticky_layout > .card-widget.card-clock > .card-glass > .card-background {margin: 0px}</style>'
+  bottom:
+    - <div class="aplayer no-destroy" data-id="000PeZCQ1i4XVs" data-server="tencent" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div>
+    - <script async src="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN/js/cursor.min.js"></script>
+    - <script async src="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN@1.6/js/paopao.min.js"></script>
+    - <script async src="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN/js/coin.min.js"></script>
+
 
   # Artitalk
   # see https://artitalk.js.org/
@@ -58,10 +78,10 @@ copy:
 social:
   fab fa-github: https://github.com/JingWZeng || Github
   fas fa-envelope: 3117005065@mail2.gdut.edu.cn || Email
-  iconfont icon-zhihu: https://www.zhihu.com/people/zjingw
-  iconfont icon-wangyiyunyinle: https://music.163.com/#/user/home?id=288923186
-  iconfont icon-bzhan: https://space.bilibili.com/1218809697
-  iconfont icon-huya: https://i.huya.com/
+  iconfont icon-zhihu: https://www.zhihu.com/people/zjingw || 知乎
+  iconfont icon-wangyiyunyinle: https://music.163.com/#/user/home?id=288923186 || 网易云
+  iconfont icon-bzhan: https://space.bilibili.com/1218809697 || 哔哩哔哩
+  iconfont icon-huya: https://i.huya.com/ || 虎牙
 
 # search (搜索)
 # --------------------------------------
@@ -564,14 +584,14 @@ canvas_nest:
 # Typewriter Effect (打字效果)
 # https://github.com/disjukr/activate-power-mode
 activate_power_mode:
-  enable: true
+  enable: false
   colorful: true # open particle animation (冒光特效)
   shake: true #  open shake (抖動特效)
   mobile: false
 
 # Mouse click effects: fireworks (鼠標點擊效果: 煙火特效)
 fireworks:
-  enable: true
+  enable: false
   zIndex: 9999 # -1 or 9999
   mobile: false
 
@@ -582,14 +602,14 @@ click_heart:
 
 # Mouse click effects: words (鼠標點擊效果: 文字)
 ClickShowText:
-  enable: false
+  enable: true
   text:
-    # - I
-    # - LOVE
-    # - YOU
+    - Are
+    - You
+    - OK
   fontSize: 15px
   random: false
-  mobile: false
+  mobile: true
 
 # Default display mode (網站默認的顯示模式)
 # light (default) / dark
@@ -648,7 +668,7 @@ subtitle:
 preloader: 
    enable: true # true|false
    load_color: '#000000' # '#37474f'
-   load_style: wizard # # spinner-box|wizard|ironheart|scarecrow|image
+   load_style: scarecrow # # spinner-box|wizard|ironheart|scarecrow|image
    load_image:  # url
 
 # aside (側邊欄)
@@ -658,7 +678,7 @@ aside:
   enable: true
   hide: false
   button: true
-  mobile: true # display on mobile
+  mobile: false # display on mobile
   position: right # left or right
   card_author:
     enable: true
@@ -721,7 +741,7 @@ newest_comments:
   sort_order: # Don't modify the setting unless you know how it works
   limit: 6
   storage: 10 # unit: mins, save data to localStorage
-  avatar: true
+  avatar: false
 
 # Bottom right button (右下角按鈕)
 # --------------------------------------
@@ -775,9 +795,9 @@ fancybox: true
 # mermaid
 # see https://github.com/mermaid-js/mermaid
 mermaid:
-  enable: false
+  enable: true
   # built-in themes: default/forest/dark/neutral
-  theme: default
+  theme: dark
 
 # Note (Bootstrap Callout)
 note:
@@ -855,24 +875,6 @@ Open_Graph_meta: true
 
 # Add the vendor prefixes to ensure compatibility
 css_prefix: true
-
-# Inject
-# Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
-# 插入代码到头部 </head> 之前 和 底部 </body> 之前
-inject:
-  head:
-    # - <link rel="stylesheet" href="lantern/dl.css">
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN@1.8/css/global.min.css">
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN/css/lantern.min.css">
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN/css/heart.min.css">
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN/css/bilibili.min.css">
-    - <link rel="stylesheet" href="//at.alicdn.com/t/font_2780023_w0hzj9g6qps.css">
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN/css/titleCat.min.css">
-    - '<style type="text/css">#aside-content.aside-content > .sticky_layout > .card-widget.card-clock > .card-glass > .card-background {margin: 0px}</style>'
-  bottom:
-    - <div class="aplayer no-destroy" data-id="000PeZCQ1i4XVs" data-server="tencent" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div>
-    - <script async src="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN/js/cursor.min.js"></script>
-    - <script async src="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN@1.6/js/paopao.min.js"></script>
 
 
 # electric_clock
