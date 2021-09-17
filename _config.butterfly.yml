@@ -8,10 +8,6 @@
 
 menu:
   首页: / || fas fas fa-igloo
-  生活||fas fa-procedures:
-    音乐: /music/ || fas fa-music
-    电影: /movies/ || fas fa-video
-    地图: /map/ || fas fa-map-marked-alt
   时间轴: /archives/ || fas fa-hourglass-end
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-battery-half
@@ -19,6 +15,10 @@ menu:
   哔哔闪念: /artitalk/ || fab fa-stack-exchange
   友人帐: /link/ || fas fa-anchor
   关于我: /about/ || far fa-address-card
+  生活||fas fa-procedures:
+    音乐: /music/ || fas fa-music
+    电影: /movies/ || fas fa-video
+    地图: /map/ || fas fa-map-marked-alt
 
 # Hide the child menu items in mobile sidebar
 hide_sidebar_menu_child: false
