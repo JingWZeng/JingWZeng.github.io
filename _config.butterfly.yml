@@ -14,11 +14,10 @@ menu:
   留言: /comments/ || fas fa-comments-dollar
   哔哔闪念: /artitalk/ || fab fa-stack-exchange
   友人帐: /link/ || fas fa-anchor
+  音乐: /music/ || fas fa-music
+  电影: /movies/ || fas fa-video
+  地图: /map/ || fas fa-map-marked-alt
   关于我: /about/ || far fa-address-card
-  生活||fas fa-procedures:
-    音乐: /music/ || fas fa-music
-    电影: /movies/ || fas fa-video
-    地图: /map/ || fas fa-map-marked-alt
 
 # Hide the child menu items in mobile sidebar
 hide_sidebar_menu_child: false
@@ -575,8 +574,8 @@ canvas_fluttering_ribbon:
 # https://github.com/hustcc/canvas-nest.js
 canvas_nest:
   enable: false
-  color: '0,0,255' #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
-  opacity: 0.7 # the opacity of line (0~1), default: 0.5.
+  color: '0,181,26' #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
+  opacity: 1 # the opacity of line (0~1), default: 0.5.
   zIndex: -1 # z-index property of the background, default: -1.
   count: 99 # the number of lines, default: 99.
   mobile: false
