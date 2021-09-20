@@ -42,6 +42,9 @@ inject:
     - <script async src="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN/js/cursor.min.js"></script>
     - <script async src="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN@1.6/js/paopao.min.js"></script>
     - <script async src="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN/js/coin.min.js"></script>
+    - <script src="https://cdn.jsdelivr.net/gh/weilain/cdn-photo/js/jquery.min.js"></script>
+    - <script async src="/js/calendar.js"></script>
+    - <script async src="/js/languages.js"></script>
 
 
   # Artitalk
@@ -723,6 +726,8 @@ aside:
     last_push_date: true
     sort_order: # Don't modify the setting unless you know how it works
   card_weibo:
+    enable: true
+  card_calendar:
     enable: true
 
 # busuanzi count for PV / UV in site

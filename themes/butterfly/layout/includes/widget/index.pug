@@ -14,6 +14,7 @@
         !=partial('includes/widget/card_weibo', {}, {cache: true})
         !=partial('includes/widget/card_recent_post', {}, {cache: true})
         !=partial('includes/widget/card_ad', {}, {cache: true})
+
   else
     //- page
     !=partial('includes/widget/card_author', {}, {cache: true})
@@ -24,9 +25,12 @@
       !=partial('includes/widget/card_weibo', {}, {cache: true})
       !=partial('includes/widget/card_recent_post', {}, {cache: true})
       !=partial('includes/widget/card_ad', {}, {cache: true})
+      if theme.aside.card_calendar
+        !=partial('includes/widget/card_calendar', {}, {cache:theme.fragment_cache})
       !=partial('includes/widget/card_newest_comment', {}, {cache: true})
       !=partial('includes/widget/card_categories', {}, {cache: true})
       !=partial('includes/widget/card_tags', {}, {cache: true})
       !=partial('includes/widget/card_archives', {}, {cache: true})
       !=partial('includes/widget/card_webinfo', {}, {cache: true})
       !=partial('includes/widget/card_bottom_self', {}, {cache: true})
+  
