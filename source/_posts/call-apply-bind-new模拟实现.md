@@ -2,8 +2,8 @@
 title: call/apply/bind/new模拟实现
 date: 2021-09-15 20:17:16
 description: call/apply/bind/new模拟实现
-cover: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109011607372.png
-top_img: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109011607372.png
+cover: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109032014290.png
+top_img: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109032014290.png
 tags: 
  - 前端
  - JS
