@@ -44,8 +44,8 @@ inject:
     - <script async src="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN@1.6/js/paopao.min.js"></script>
     - <script async src="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN/js/coin.min.js"></script>
     - <script src="https://cdn.jsdelivr.net/gh/weilain/cdn-photo/js/jquery.min.js"></script>
-    - <script async src="/js/calendar.js"></script>
-    - <script async src="/js/languages.js"></script>
+    # - <script async src="/js/calendar.js"></script>
+    # - <script async src="/js/languages.js"></script>
 
 
   # Artitalk
@@ -729,7 +729,7 @@ aside:
   card_weibo:
     enable: true
   card_calendar:
-    enable: true
+    enable: false
 
 # busuanzi count for PV / UV in site
 # 訪問人數
