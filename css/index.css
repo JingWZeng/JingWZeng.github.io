@@ -1559,6 +1559,9 @@ img:not([src]) {
 .aplayer-list ol {
   max-height: 800px !important;
 }
+#bbTimeList {
+  margin: 10px 0;
+}
 :root {
   --hl-color: #eff;
   --hl-bg: #212121;
