@@ -51,7 +51,7 @@ inject:
   # Artitalk
   # see https://artitalk.js.org/
 artitalk:
-  enable: true
+  enable: false
   appId: UMfaB6cgmg5xQ2ywLsLLrGTx-MdYXbMMI
   appKey: nUShiWBtXr05l5wRY8blFrBO
   path:
@@ -901,6 +901,20 @@ electric_clock:
     index: 0
   loading: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202108281639138.gif #加载动画自定义
 
+# fcircle
+# see https://akilar.top/posts/8480b91c/
+fcircle:
+  enable: true #控制开关
+  apiurl: https://hexo-friends.vercel.app/api #api地址
+  initnumber: 20, #【可选】页面初始化展示文章数量
+  stepnumber: 10 #【可选】每次加载增加的篇数
+  css: https://cdn.jsdelivr.net/npm/hexo-filter-fcircle/assets/css/default.min.css #【可选】开发者接口，自定义css链接
+  js: https://cdn.jsdelivr.net/npm/hexo-filter-fcircle/assets/js/fcircle.min.js #【可选】开发者接口，自定义js链接
+  path: friends #【可选】fcircle的路径名称。默认为 fcircle，生成的页面为 fcircle/index.html
+  front_matter: #【可选】fcircle页面的 front_matter 配置
+    title: 友链朋友圈
+    comments: false
+    aside: false
   
 # CDN
 # Don't modify the following settings unless you know how they work

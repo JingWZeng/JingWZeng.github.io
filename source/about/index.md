@@ -3,6 +3,7 @@ title: 关于我
 date: 2021-08-19 11:11:37
 type: "about"
 comments: false
+aside: false
 ---
 <div  style=" border-radius:70px; text-align:center;">
 <img  src="https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202108231635263.jpeg" style="border-radius:70px;width:110px;height:110px;"

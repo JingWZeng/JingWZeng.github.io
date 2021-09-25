@@ -4,6 +4,7 @@ date: 2021-08-23 21:36:07
 type: 'music'
 aplayer: true
 comments: false
+aside: false
 ---
 <div class="aplayer" data-id="000PeZCQ1i4XVs" data-server="tencent" data-type="artist" data-mutex="true" 
 autoplay=false  data-preload="auto" data-theme="#3F51B5"></div>

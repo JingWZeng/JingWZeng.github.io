@@ -115,7 +115,7 @@ douban:
     meta: true
     comments: true
     top_img: false
-    aside: true
+    aside: false
     path: movies
     limit: 1
   timeout: 10000 
@@ -286,4 +286,4 @@ gitcalendar:
 
 # 双栏布局
 butterfly_article_double_row:
-  enable: true
+  enable: false
