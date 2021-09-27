@@ -359,7 +359,7 @@ valine:
   appId: UMfaB6cgmg5xQ2ywLsLLrGTx-MdYXbMMI
   appKey: nUShiWBtXr05l5wRY8blFrBO
   pageSize: 10 # comment list page size
-  avatar: monsterid # gravatar style https://valine.js.org/#/avatar
+  avatar: robohash # gravatar style https://valine.js.org/#/avatar
   lang: zh-CN # i18n: zh-CN/zh-TW/en/ja
   placeholder: 记得留下你的暱称和邮箱....可以快速收到回復 # valine comment input placeholder (like: Please leave your footprints)
   guest_info: nick,mail,link # valine comment header info (nick/mail/link)
@@ -428,13 +428,13 @@ chatra:
 # tidio
 # https://www.tidio.com/
 tidio:
-  enable: false
-  public_key:
+  enable: true
+  public_key: 0cocual41nxqk4aq4xeurwcxhflkuayh
 
 # daovoice
 # http://daovoice.io/
 daovoice:
-  enable: true
+  enable: false
   app_id: 6fc22659
 
 # gitter
@@ -620,7 +620,7 @@ ClickShowText:
 
 # Default display mode (網站默認的顯示模式)
 # light (default) / dark
-display_mode: dark
+display_mode: light
 
 # Beautify (美化頁面顯示)
 beautify:

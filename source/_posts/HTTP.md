@@ -1,7 +1,7 @@
 ---
 title: HTTP
 date: 2021-09-24 11:12:50
-author: zJingW
+author: ZJingW
 categories: HTTP
 description: 《图解HTTP》的总结
 top_img: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109032014297.png
