@@ -44,6 +44,12 @@ inject:
     - <script async src="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN@1.6/js/paopao.min.js"></script>
     - <script async src="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN/js/coin.min.js"></script>
     - <script src="https://cdn.jsdelivr.net/gh/weilain/cdn-photo/js/jquery.min.js"></script>
+    - <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
+    - <script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script>
+    - <script async type="text/javascript" src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@latest/source/js/snow.min.js"></script>
+    # 页脚养鱼
+    # - <script defer src="https://rmt.dogedoge.com/fetch/~/source/jsdelivr/npm/jquery@latest/dist/jquery.min.js"></script>
+    # - <script defer data-pjax src="https://cdn.jsdelivr.net/gh/weilining/jsdelivr/jquery/flyingfish/butterfly@3.4.1.flyingfish.min.js"></script>
     # - <script async src="/js/calendar.js"></script>
     # - <script async src="/js/languages.js"></script>
 

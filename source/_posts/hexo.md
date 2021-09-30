@@ -6,7 +6,6 @@ description: 关于本博客的提交部署方式
 tags: Hexo
 top_img: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109011607379.jpg
 cover: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109011607379.jpg
-sticky: 99
 ---
 
 
