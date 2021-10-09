@@ -13,6 +13,7 @@ menu:
   友人帐: /link/ || iconfont icon-youlianguanli
   朋友圈: /friends/ || fas fa-at
   关于我: /about/ || iconfont icon-guanyuwomen
+  网站监控: /jiankong/ || fas fa-eye
   文章 || iconfont icon-wenzhang:
      时间轴: /archives/ || iconfont icon-shijianzhou
      标签: /tags/ || iconfont icon-biaoqian
@@ -30,6 +31,7 @@ hide_sidebar_menu_child: false
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
+    - '<script type="text/javascript">(function (w) {w.frontjsConfig={token:"e627823028dca0fbe59a98c1874ec272",behaviour:15,captureConsoleLog:true,trustVendor:true,ignoreVendor:true,optimisedForSPA:true,useHistory:true,FPSThreshold:10};w.frontjsTmpData = {r:[],e:[],l:[]};w.frontjsTmpCollector = function (ev) {(ev.message ? window.frontjsTmpData.e : window.frontjsTmpData.r).push([new Date().getTime(), ev])};w.FrontJS = {addEventListener: function (t, f) {w.frontjsTmpData.l.push([t, f]);return f;},removeEventListener: function (t, f) {for (var i = 0; i < w.frontjsTmpData.l.length; i++) {t === w.frontjsTmpData.l[i][0] && f === w.frontjsTmpData.l[i][1] && w.frontjsTmpData.l.splice(i, 1);}return f;}};w.document.addEventListener("error", w.frontjsTmpCollector, true);w.addEventListener("error", w.frontjsTmpCollector, true);w.addEventListener("load", function () {var n = w.document.createElement("script");n.src = "https://frontjs-static.pgyer.com/dist/current/frontjs.web.min.js"; w.document.body.appendChild(n);}, true);})(window);</script>'
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN@2.5/css/global.min.css"/>
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN/css/lantern.min.css"/>
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN/css/heart.min.css"/>
@@ -44,9 +46,9 @@ inject:
     - <script async src="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN@1.6/js/paopao.min.js"></script>
     - <script async src="https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN/js/coin.min.js"></script>
     - <script src="https://cdn.jsdelivr.net/gh/weilain/cdn-photo/js/jquery.min.js"></script>
-    - <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
-    - <script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script>
-    - <script async type="text/javascript" src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@latest/source/js/snow.min.js"></script>
+    # - <div><canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;pointer-events:none"></canvas></div>
+    # - <script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script>
+    # - <script async type="text/javascript" src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@latest/source/js/snow.min.js"></script>
     # 页脚养鱼
     # - <script defer src="https://rmt.dogedoge.com/fetch/~/source/jsdelivr/npm/jquery@latest/dist/jquery.min.js"></script>
     # - <script defer data-pjax src="https://cdn.jsdelivr.net/gh/weilining/jsdelivr/jquery/flyingfish/butterfly@3.4.1.flyingfish.min.js"></script>
