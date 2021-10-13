@@ -50,7 +50,27 @@ ESLint 的解析器，早期的时候用的是 Esprima[1]，后面基于 Esprima
 除了指定解析器 parser 外，还可以额外配置解析器参数 parserOption：
 
 ```
-{     // ESLint 默认解析器，也可以指定成别的     parser: "espree",      parserOption: {         // 指定要使用的 ECMAScript 版本，默认值 5         ecmaVersion: 5,         // 设置为 script (默认) 或 module（如果你的代码是 ECMAScript 模块)         sourceType: "script",         // 这是个对象，表示你想使用的额外的语言特性,所有选项默认都是 false         ecmafeatures: {             // 是否允许在全局作用域下使用 return 语句             globalReturn: false,             // 是否启用全局 strict 模式（严格模式）             impliedStrict: false,             // 是否启用JSX             jsx: false,             // 是否启用对实验性的objectRest/spreadProperties的支持             experimentalObjectRestSpread: false         }     } }
+{
+    // ESLint 默认解析器，也可以指定成别的
+    parser: "espree",
+    parserOption: {
+        // 指定要使用的 ECMAScript 版本，默认值 5
+        ecmaVersion: 5,
+        // 设置为 script (默认) 或 module（如果你的代码是 ECMAScript 模块)
+        sourceType: "script",
+        // 这是个对象，表示你想使用的额外的语言特性,所有选项默认都是 false
+        ecmafeatures: {
+            // 是否允许在全局作用域下使用 return 语句
+            globalReturn: false,
+            // 是否启用全局 strict 模式（严格模式）
+            impliedStrict: false,
+            // 是否启用JSX
+            jsx: false,
+            // 是否启用对实验性的objectRest/spreadProperties的支持
+            experimentalObjectRestSpread: false
+        }
+    }
+}
 ```
 
 ## 指定环境 env
@@ -67,8 +87,17 @@ ESLint 的解析器，早期的时候用的是 Esprima[1]，后面基于 Esprima
 
 配置方式如下：
 
-```
-{     env: {         browser: true,         node: true,         es6: true,         commonjs: true,         mocha: true,         jquery: true,     } }
+```js
+{
+    env: {
+        browser: true,
+        node: true,
+        es6: true,
+        commonjs: true,
+        mocha: true,
+        jquery: true,
+    }
+}
 ```
 
 可以指定多个环境并不意味着配置的环境越多越好，实际配置的时候还是得依据当前项目的环境来选择。
@@ -79,8 +108,13 @@ ESLint 的一些核心规则依赖于对代码在运行时可用的全局变量�
 
 如果你想使用这些全局变量，那就可以通过 globals 来指定。比如在 react .eslintrc.js[6] 里就把 spyOnDev、 spyOnProd 等变量挂在了 global 下作为全局变量：
 
-```
-{     globals: {         spyOnDev: true,         spyOnProd: true,     } }
+```js
+{
+    globals: {
+        spyOnDev: true,
+        spyOnProd: true,
+    }
+}
 ```
 
 对于它的值需要特别说明下：
@@ -92,8 +126,16 @@ ESLint 的一些核心规则依赖于对代码在运行时可用的全局变量�
 
 实际项目中配置规则的时候，不可能团队一条一条的去商议配置，太费精力了。通常的做法是使用业内大家普通使用的、遵循的编码规范;然后通过 extends 去引入这些规范。extends 配置的时候接受字符串或者数组：
 
-```
-{     extends: [         'eslint:recommended',         'plugin:vue/essential',         'eslint-config-standard', // 可以缩写成 'standard'         '@vue/prettier',         './node_modules/coding-standard/.eslintrc-es6'     ] }
+```js
+{
+    extends: [
+        'eslint:recommended',
+        'plugin:vue/essential',
+        'eslint-config-standard', // 可以缩写成 'standard'
+        '@vue/prettier',
+        './node_modules/coding-standard/.eslintrc-es6'
+    ]
+}
 ```
 
 ### 从上面的配置，可以知道 extends 支持的配置类型可以是以下几种
@@ -126,14 +168,36 @@ ESLint 相关的插件的命名形式有 2 种：不带命名空间的和带命�
 - eslint-plugin- 开头的可以省略这部分前缀;
 - @/ 开头的;
 
-```
-{     plugins: [         'jquery',          // 是指 eslint-plugin-jquery         '@jquery/jquery',  // 是指 @jquery/eslint-plugin-jquery         '@foobar',         // 是指 @foobar/eslint-plugin     ] }
+```js
+{
+  plugins: [
+    "jquery", // 是指 eslint-plugin-jquery
+    "@jquery/jquery", // 是指 @jquery/eslint-plugin-jquery
+    "@foobar", // 是指 @foobar/eslint-plugin
+  ];
+}
 ```
 
 当需要基于插件进行 extends 和 rules 的配置的时候，需要加上插件的引用，比如：
 
-```
-{     plugins: [         'jquery',   // eslint-plugin-jquery         '@foo/foo', // @foo/eslint-plugin-foo         '@bar,      // @bar/eslint-plugin     ],     extends: [         'plugin:jquery/recommended',         'plugin:@foo/foo/recommended',         'plugin:@bar/recommended'     ],     rules: {         'jquery/a-rule': 'error',         '@foo/foo/some-rule': 'error',         '@bar/another-rule': 'error'     }, }
+```js
+{
+    plugins: [
+        'jquery',   // eslint-plugin-jquery
+        '@foo/foo', // @foo/eslint-plugin-foo
+        '@bar,      // @bar/eslint-plugin
+    ],
+    extends: [
+        'plugin:jquery/recommended',
+        'plugin:@foo/foo/recommended',
+        'plugin:@bar/recommended'
+    ],
+    rules: {
+        'jquery/a-rule': 'error',
+        '@foo/foo/some-rule': 'error',
+        '@bar/another-rule': 'error'
+    },
+}
 ```
 
 以上配置来自 ESLint plugins[10]
@@ -150,8 +214,17 @@ ESLint 提供了大量内置的规则，这里是它的规则列表 ESLint Rules
 
 通常规则只需要配置开启还是关闭即可;但是也有些规则可以传入属性，比如：
 
-```
-{     rules: {         'quotes': ['error', 'single'],  // 如果不是单引号，则报错         'one-var': ['error', {             'var': 'always',  // 每个函数作用域中，只允许 1 个 var 声明             'let': 'never',   // 每个块作用域中，允许多个 let 声明             'const': 'never', // 每个块作用域中，允许多个 const 声明         }]     } }
+```js
+{
+    rules: {
+        'quotes': ['error', 'single'],  // 如果不是单引号，则报错
+        'one-var': ['error', {
+            'var': 'always',  // 每个函数作用域中，只允许 1 个 var 声明
+            'let': 'never',   // 每个块作用域中，允许多个 let 声明
+            'const': 'never', // 每个块作用域中，允许多个 const 声明
+        }]
+    }
+}
 ```
 
 如何知道某个扩展有哪些规则可以配置，以及每个规则具体限制?这里直接给出业内著名且使用比较多的规则列表的快速链接：
@@ -180,16 +253,22 @@ ESLint 检测配置文件步骤：
 
 通常我们都习惯把 ESLint 配置文件放到项目根目录，因此可以为了避免 ESLint 校验的时候往父级目录查找配置文件，所以需要在配置文件中加上 root: true。
 
-```
-{     root: true, }
+```js
+{
+root: true,
+}
 ```
 
 ### 添加共享数据
 
 ESLint 支持在配置文件添加共享设置，你可以添加 settings 对象到配置文件，它将提供给每一个将被执行的规则。如果你想添加的自定义规则而且使它们可以访问到相同的信息，这将会很有用，并且很容易配置：
 
-```
-{     settings: {         sharedData: 'Hello'     },  }
+```js
+{
+    settings: {
+        sharedData: 'Hello'
+    },
+}
 ```
 
 参考：ESLint 配置文件.eslintrc 参数说明[11]
@@ -198,8 +277,22 @@ ESLint 支持在配置文件添加共享设置，你可以添加 settings 对象
 
 比如 webpack 的中包含了某些运行时的 JS 文件，而这些文件是只跑在浏览器端的，所以需要针对这部分文件进行差异化配置：
 
-```
-overrides: [     {         files: ["lib/**/*.runtime.js", "hot/*.js"],         env: {             es6: false,             browser: true         },             globals: {             Promise: false         },         parserOptions: {             ecmaVersion: 5         }     } ]
+```js
+overrides: [
+  {
+    files: ["lib/**/*.runtime.js", "hot/*.js"],
+    env: {
+      es6: false,
+      browser: true,
+    },
+    globals: {
+      Promise: false,
+    },
+    parserOptions: {
+      ecmaVersion: 5,
+    },
+  },
+];
 ```
 
 以上配置来自 webpack .eslintrc.js[12]
@@ -220,8 +313,12 @@ ESLint 支持 3 种配置方式：
 
 下面通过命令来生成一个配置文件：
 
-```
-# 安装 eslint npm i eslint -D  # 初始化一个配置文件 npx eslint --init
+```js
+# 安装 eslint
+npm i eslint -D
+
+# 初始化一个配置文件
+npx eslint --init
 ```
 
 最后会在当前目录生成一个 .eslintrc.js 文件。这里就不把代码贴出来了，没参考意义。
@@ -230,8 +327,12 @@ ESLint 支持 3 种配置方式：
 
 ## 校验单个文件
 
-```
-// 校验 a.js 和 b.js npx eslint a.js b.js  // 校验 src 和 scripts 目录 npx eslint src scripts
+```js
+// 校验 a.js 和 b.js
+npx eslint a.js b.js
+
+// 校验 src 和 scripts 目录
+npx eslint src scripts
 ```
 
 ## 校验别的类型的文件
@@ -240,7 +341,7 @@ ESLint 支持 3 种配置方式：
 
 可以通过 --ext 来指定具体需要校验的文件：
 
-```
+```js
 npx eslint --ext .js,.jsx,.vue src
 ```
 
@@ -250,13 +351,13 @@ rules 列表项中标识了一个扳手 🔧 图案的规则就标识该规则�
 
 对于如下的 a.js 代码：
 
-```
-const num = 12
+```js
+const num = 12;
 ```
 
 当在配置文件配置了 'semi': [2, 'always'] 后，运行命令：
 
-```
+```js
 npx eslint --fix a.js
 ```
 
@@ -266,16 +367,21 @@ npx eslint --fix a.js
 
 检验命令比较长，也难记，习惯上会把这些命名直接写到 package.json 里：
 
-```
-{     "scripts": {         "lint": "npx eslint --ext .js,.jsx,.vue src",         "lint:fix": "npx eslint --fix --ext .js,.jsx,.vue src",     } }
+```js
+{
+    "scripts": {
+        "lint": "npx eslint --ext .js,.jsx,.vue src",
+        "lint:fix": "npx eslint --fix --ext .js,.jsx,.vue src",
+    }
+}
 ```
 
 ## 过滤一些不需要校验的文件
 
 对于一些公共的 JS、测试脚本或者是特定目录下的文件习惯上是不需要校验的，因此可以在项目根目录通过创建一个 .eslintignore 文件来配置，告诉 ESLint 校验的时候忽略它们：
 
-```
-public/ src/main.js
+```js
+public / src / main.js;
 ```
 
 除了 .eslintignore 中指定的文件或目录，ESLint 总是忽略 /node_modules/ 和 /bower_components/ 中的文件;因此对于一些目前解决不了的规则报错，但是如果又急于打包上线，在不影响运行的情况下，我们就可以利用 .eslintignore 文件将其暂时忽略。
@@ -317,15 +423,19 @@ public/ src/main.js
 
 往 package.json 里注册了一个命令：
 
-```
-{     "scripts": {         "lint": "vue-cli-service lint"     } }
+```js
+{
+    "scripts": {
+        "lint": "vue-cli-service lint"
+    }
+}
 ```
 
 执行这个命令之后，它会去检查和修复部分可以修复的问题。默认查找的文件是 src 和 tests 目录下所有的 .js,.jsx,.vue 文件，以及项目根目录下所有的 js 文件(比如，也会检查 .eslintrc.js)。
 
 当然你也可以自定义的传入参数和校验文件：
 
-```
+```js
 vue-cli-service lint [options] [...files]
 ```
 
@@ -338,8 +448,10 @@ vue-cli-service lint [options] [...files]
 
 增加了代码保存触发校验的功能 lintOnSave，这个功能默认是开启的。如果想要关闭这个功能，可以在 vue.config.js 里配置，习惯上只开启 development 环境下的代码保存校验功能：
 
-```
-module.exports = {     lintOnSave: process.env.NODE_ENV === 'development', }
+```js
+module.exports = {
+  lintOnSave: process.env.NODE_ENV === "development",
+};
 ```
 
 lintOnSave 参数说明：
@@ -368,8 +480,14 @@ eslint-plugin-vue 是对 .vue 文件进行代码校验的插件。
 
 代码规范的东西，原则还是得由各自的团队去磨合商议出一套适合大家的规则。不过，如果你用的是 Vue2，我这里可以推荐 2 套 extends 配置：
 
-```
-{     // Vue 官方示例上的配置    extends: ['eslint:recommended', 'plugin:vue/recommended'],          // 或者使用 AlloyTeam 团队那套    extends: ['alloy', 'alloy/vue'] }
+```js
+{
+    // Vue 官方示例上的配置
+   extends: ['eslint:recommended', 'plugin:vue/recommended'],
+
+   // 或者使用 AlloyTeam 团队那套
+   extends: ['alloy', 'alloy/vue']
+}
 ```
 
 ### 配置和插件对应的解析器
@@ -378,8 +496,20 @@ eslint-plugin-vue 是对 .vue 文件进行代码校验的插件。
 
 而 vue-eslint-parser 只能解析 template 的内容，但是不会解析 JS，因此还需要对解析器做如下配置：
 
-```
-{     parser: 'vue-eslint-parser',     parseOptions: {         parser: 'babel-eslint',         ecmaVersion: 12,         sourceType: 'module'     },     extends: [         'eslint:recommended',          'plugin:vue/recommended'     ],     plugins: ['vue'] }
+```js
+{
+    parser: 'vue-eslint-parser',
+    parseOptions: {
+        parser: 'babel-eslint',
+        ecmaVersion: 12,
+        sourceType: 'module'
+    },
+    extends: [
+        'eslint:recommended',
+        'plugin:vue/recommended'
+    ],
+    plugins: ['vue']
+}
 ```
 
 参考：eslint-plugin-vue faq[13]
@@ -424,8 +554,15 @@ eslint-plugin-vue 是对 .vue 文件进行代码校验的插件。
 
 初始化操作：
 
-```
-# 安装包 npm i prettier -D    # 新建 .prettierrc.js echo module.exports = {} > .prettierrc.js  # 新建 .prettierignore echo > .prettierignore
+```js
+# 安装包
+npm i prettier -D
+
+# 新建 .prettierrc.js
+echo module.exports = {} > .prettierrc.js
+
+# 新建 .prettierignore
+echo > .prettierignore
 ```
 
 Prettier 支持可以配置参数不多，总共才 21 个，这里是所有参数的说明 prettier options[14]
@@ -434,22 +571,43 @@ Prettier 支持可以配置参数不多，总共才 21 个，这里是所有参�
 
 如下，把项目中会用到的参数进行一个说明：
 
-```
-module.exports = {     printWidth: 80,                    //（默认值）单行代码超出 80 个字符自动换行     tabWidth: 2,                       //（默认值）一个 tab 键缩进相当于 2 个空格     useTabs: true,                     // 行缩进使用 tab 键代替空格     semi: false,                       //（默认值）语句的末尾加上分号     singleQuote: true,                 // 使用单引号     quoteProps: 'as-needed',           //（默认值）仅仅当必须的时候才会加上双引号     jsxSingleQuote: true,              // 在 JSX 中使用单引号     trailingComma: 'all',              // 不用在多行的逗号分隔的句法结构的最后一行的末尾加上逗号     bracketSpacing: true,              //（默认值）在括号和对象的文字之间加上一个空格     jsxBracketSameLine: true,          // 把 > 符号放在多行的 JSX 元素的最后一行     arrowParens: 'avoid',              // 当箭头函数中只有一个参数的时候可以忽略括弧     vueIndentScriptAndStyle: false,    //（默认值）对于 .vue 文件，不缩进 <script> 和 <style> 里的内容     embeddedLanguageFormatting: 'off', // 不允许格式化内嵌的代码块，比如 markdown  文件里的代码块 };
+```js
+module.exports = {
+  printWidth: 80, //（默认值）单行代码超出 80 个字符自动换行
+  tabWidth: 2, //（默认值）一个 tab 键缩进相当于 2 个空格
+  useTabs: true, // 行缩进使用 tab 键代替空格
+  semi: false, //（默认值）语句的末尾加上分号
+  singleQuote: true, // 使用单引号
+  quoteProps: "as-needed", //（默认值）仅仅当必须的时候才会加上双引号
+  jsxSingleQuote: true, // 在 JSX 中使用单引号
+  trailingComma: "all", // 不用在多行的逗号分隔的句法结构的最后一行的末尾加上逗号
+  bracketSpacing: true, //（默认值）在括号和对象的文字之间加上一个空格
+  jsxBracketSameLine: true, // 把 > 符号放在多行的 JSX 元素的最后一行
+  arrowParens: "avoid", // 当箭头函数中只有一个参数的时候可以忽略括弧
+  vueIndentScriptAndStyle: false, //（默认值）对于 .vue 文件，不缩进 <script> 和 <style> 里的内容
+  embeddedLanguageFormatting: "off", // 不允许格式化内嵌的代码块，比如 markdown  文件里的代码块
+};
 ```
 
 “扩展阅读：关于 Trailing commas[15] 你或许想了解更多。
 
 然后可以通过命令来格式化代码：
 
-```
-# 将格式化当前目录及子目录下所有文件 npx prettier --write .  # 检查某个文件是否已经格式化 npx prettier --check src/main.js
+```js
+# 将格式化当前目录及子目录下所有文件
+npx prettier --write .
+
+# 检查某个文件是否已经格式化
+npx prettier --check src/main.js
 ```
 
 如果有些文件不想被 Prettier 格式化，可以将其写入到 .prettierignore 里：
 
-```
-build/ package.json public/ test/*.*
+```js
+build/
+package.json
+public/
+test/*.*
 ```
 
 ### Prettier 和 ESLint 一起干活更配哦
@@ -458,14 +616,19 @@ build/ package.json public/ test/*.*
 
 和 ESLint 配合使用需要用到 eslint-plugin-prettier 这个插件：
 
-```
+```js
 npm i eslint-plugin-prettier -D
 ```
 
 配置：
 
-```
-{     plugins: ['prettier'],     rules: {         'prettier/prettier': 'error'     } }
+```js
+{
+    plugins: ['prettier'],
+    rules: {
+        'prettier/prettier': 'error'
+    }
+}
 ```
 
 这个插件的工作原理是先调用 Prettier 对你的代码进行格式化，然后会把格式化前后不一致的地方进行标记，通过配置 'prettier/prettier': 'error' 此条规则会将标记地方进行 error 级别的报错提示，然后可以通过 ESLint 的 --fix 自动修复功能将其修复。
@@ -478,8 +641,13 @@ npm i eslint-plugin-prettier -D
 
 用 Prettier 的话来说很简单，只要使用 eslint-config-prettier 就可以了。解决冲突的思路就是通过将这个包提供的扩展放到 extends 最后面引入，依据 rules 生效的优先级，所以它会覆盖前面起冲突的规则，比如：
 
-```
-{     extends: [         'eslint:recommended',         'prettier',  // 必须放最后     ], }
+```js
+{
+    extends: [
+        'eslint:recommended',
+        'prettier',  // 必须放最后
+    ],
+}
 ```
 
 除了能覆盖和 ESLint 中起冲突的规则之外，eslint-config-prettier 还能覆盖来自以下插件的规则(只列了部分)：
@@ -491,40 +659,85 @@ npm i eslint-plugin-prettier -D
 
 如果想覆盖某些插件的规则，需要引入对应插件的扩展，比如：
 
-```
-{     extends: [         'standard',         'plugin:vue/recommended',         'prettier/standard',      // 覆盖 eslint-config-stanard          'prettier/vue',           // 覆盖 eslint-plugin-vue      ], }
+```js
+{
+    extends: [
+        'standard',
+        'plugin:vue/recommended',
+        'prettier/standard',      // 覆盖 eslint-config-stanard
+        'prettier/vue',           // 覆盖 eslint-plugin-vue
+    ],
+}
 ```
 
 “提示：在 eslint-config-prettier 8.0.0 版本后，extends 不再需要为单独的插件引入对应扩展来覆盖冲突了，统一引入 'prettier' 即可。
 
 如果同时使用了 eslint-plugin-prettier 和 eslint-config-prettier 可以这么配置：
 
-```
-{     extends: ['plugin:prettier/recommended'], }
+```js
+{
+   extends: ['plugin:prettier/recommended'],
+}
 ```
 
 它其实和下面这些配置是等价的：
 
-```
-{     extends: ['prettier'],  // eslint-config-prettier 提供的，用于覆盖起冲突的规则     plugins: ['prettier'],  // 注册 eslint-plugin-prettier 插件     rules: {         'prettier/prettier': 'error',         'arrow-body-style': 'off',         'prefer-arrow-callback': 'off'     } }
+```js
+{
+    extends: ['prettier'],  // eslint-config-prettier 提供的，用于覆盖起冲突的规则
+    plugins: ['prettier'],  // 注册 eslint-plugin-prettier 插件
+    rules: {
+        'prettier/prettier': 'error',
+        'arrow-body-style': 'off',
+        'prefer-arrow-callback': 'off'
+    }
+}
 ```
 
 所以如果是在 Vue 2 项目中配置 ESLint 和 Prettier 会这么配置：
 
-```
-{     parser: 'vue-eslint-parser',     parseOptions: {         parser: 'babel-eslint',         ecmaVersion: 12,         sourceType: 'module'     },     extends: [         'eslint:recommended',          'plugin:vue/recommended',         'plugin:prettier/recommended',  // 在前面 Vue 配置的基础上加上这行     ],     plugins: ['vue'] }
+```js
+{
+    parser: 'vue-eslint-parser',
+    parseOptions: {
+        parser: 'babel-eslint',
+        ecmaVersion: 12,
+        sourceType: 'module'
+    },
+    extends: [
+        'eslint:recommended',
+        'plugin:vue/recommended',
+        'plugin:prettier/recommended',  // 在前面 Vue 配置的基础上加上这行
+    ],
+    plugins: ['vue']
+}
 ```
 
 其实如果你的项目是用 vue-cli 初始化的，且选择了 eslint + prettier 方案的话，生成的项目中，.eslintrc.js 配置文件中 extends 的配置是这样的：
 
-```
-{     extends: [         'plugin:vue/essential',         'eslint:recommended',          '@vue/prettier'     ] }
+```js
+{
+    extends: [
+        'plugin:vue/essential',
+        'eslint:recommended',
+        '@vue/prettier'
+    ]
+}
 ```
 
 它的最后一项扩展是 @vue/prettier，这个对应的是 @vue/eslint-config-prettier 这个包，让我们看看这个包下面的 index.js 内容：
 
-```
-{     plugins: ['prettier'],     extends: [         require.resolve('eslint-config-prettier'),         require.resolve('eslint-config-prettier/vue')     ],     rules: {         'prettier/prettier': 'warn'     } }
+```js
+{
+    plugins: ['prettier'],
+    extends: [
+        require.resolve('eslint-config-prettier'),
+        require.resolve('eslint-config-prettier/vue')
+    ],
+    rules: {
+        'prettier/prettier': 'warn'
+    }
+}
 ```
 
 这个和我们上面配置的内容是相差无几的，而引入 eslint-config-prettier/vue 是因为这个 @vue/eslint-config-prettier 包依赖的 eslint-config-prettier 版本是 ^6.0.0 版本的，所以在处理冲突的时候需要特别指定和对应类型插件匹配的扩展。
@@ -533,8 +746,37 @@ npm i eslint-plugin-prettier -D
 
 EditorConfig[16] 是个啥玩意?它可以对多种类型的单文件进行简单的格式化，它提供的配置参数很少：
 
-```
-# 告诉 EditorConfig 插件，这是根文件，不用继续往上查找 root = true  # 匹配全部文件 [*]  # 设置字符集 charset = utf-8  # 缩进风格，可选 space、tab indent_style = tab  # 缩进的空格数，当 indent_style = tab 将使用 tab_width # 否则使用 indent_size indent_size = 2 tab_width = 2  # 结尾换行符，可选 lf、cr、crlf end_of_line = lf  # 在文件结尾插入新行 insert_final_newline = true  # 删除一行中的前后空格 trim_trailing_whitespace = true  # 匹配md结尾的文件 [*.md] insert_final_newline = false trim_trailing_whitespace = false
+```js
+# 告诉 EditorConfig 插件，这是根文件，不用继续往上查找
+root = true
+
+# 匹配全部文件
+[*]
+
+# 设置字符集
+charset = utf-8
+
+# 缩进风格，可选 space、tab
+indent_style = tab
+
+# 缩进的空格数，当 indent_style = tab 将使用 tab_width
+# 否则使用 indent_size
+indent_size = 2
+tab_width = 2
+
+# 结尾换行符，可选 lf、cr、crlf
+end_of_line = lf
+
+# 在文件结尾插入新行
+insert_final_newline = true
+
+# 删除一行中的前后空格
+trim_trailing_whitespace = true
+
+# 匹配md结尾的文件
+[*.md]
+insert_final_newline = false
+trim_trailing_whitespace = false
 ```
 
 虽然它提供的格式化的配置参数很少，就 3 个，缩进风格、是否在文件末尾插入新行和是否删除一行中前后空格。但是它还是非常有必要存在的，理由有 3 个：
@@ -559,8 +801,15 @@ EditorConfig[16] 是个啥玩意?它可以对多种类型的单文件进行简�
 
 然后把以下配置贴进去即可;
 
-```
-{     "eslint.alwaysShowStatus": true,  // 总是在 VSCode 显示 ESLint 的状态     "eslint.quiet": true,             // 忽略 warning 的错误     "editor.codeActionsOnSave": {     // 保存时使用 ESLint 修复可修复错误         "source.fixAll": true,         "source.fixAll.eslint": true     }  }
+```js
+{
+    "eslint.alwaysShowStatus": true,  // 总是在 VSCode 显示 ESLint 的状态
+    "eslint.quiet": true,             // 忽略 warning 的错误
+    "editor.codeActionsOnSave": {     // 保存时使用 ESLint 修复可修复错误
+        "source.fixAll": true,
+        "source.fixAll.eslint": true
+    }
+}
 ```
 
 配置说明，在 ESLint 2.0.4 版本开始：
@@ -582,7 +831,7 @@ EditorConfig[16] 是个啥玩意?它可以对多种类型的单文件进行简�
 
 1、执行以下命令：
 
-```
+```js
 npx mrm lint-staged
 ```
 
@@ -592,13 +841,17 @@ npx mrm lint-staged
 
 如果上面顺利会在 package.json 里写入 lint-staged，可以自行修改让它支持 .vue 文件的校验：
 
-```
-{     "lint-staged": {         "*.{js,vue}": "eslint --cache --fix"     } }
+```js
+{
+    "lint-staged": {
+        "*.{js,vue}": "eslint --cache --fix"
+    }
+}
 ```
 
 2、启动 git hooks
 
-```
+```js
 npx husky install
 ```
 
@@ -606,7 +859,7 @@ npx husky install
 
 3、创建 pre-commit 钩子
 
-```
+```js
 npx husky add .husky/pre-commit "npx lint-staged"
 ```
 
@@ -630,74 +883,38 @@ npx husky add .husky/pre-commit "npx lint-staged"
 
 参考资料
 
-[1]Esprima:
+[1] [Esprima](http://esprima.org/)
 
-http://esprima.org/
+[2] [Espree](https://github.com/eslint/espree)
 
-[2]Espree:
+[3] [@babel/eslint-parser](https://github.com/babel/babel/tree/main/eslint/babel-eslint-parser)
 
-https://github.com/eslint/espree
+[4] [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint)
 
-[3]@babel/eslint-parser:
+[5] [Specifying Environments](https://eslint.org/docs/user-guide/configuring/language-options#specifying-environments)
 
-https://github.com/babel/babel/tree/main/eslint/babel-eslint-parser
+[6] [react .eslintrc.js](https://github.com/facebook/react/blob/master/.eslintrc.js)
 
-[4]@typescript-eslint/parser:
+[7] [eslint-config-standard](https://github.com/standard/eslint-config-standard)
 
-https://github.com/typescript-eslint/typescript-eslint
+[8] [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
 
-[5]Specifying Environments:
+[9] [eslint-config-alloy](https://github.com/AlloyTeam/eslint-config-alloy)
 
-https://eslint.org/docs/user-guide/configuring/language-options#specifying-environments
+[10] [ESLint plugins](https://eslint.org/docs/user-guide/configuring/plugins#configuring-plugins)
 
-[6]react .eslintrc.js:
+[11] [ESLint 配置文件.eslintrc 参数说明](https://gist.github.com/rswanderer/29dc65efc421b3b5b0442f1bd3dcd046)
 
-https://github.com/facebook/react/blob/master/.eslintrc.js
+[12] [webpack .eslintrc.js](https://github.com/webpack/webpack/blob/master/.eslintrc.js)
 
-[7]eslint-config-standard:
+[13] [eslint-plugin-vue](https://eslint.vuejs.org/user-guide/#faq)
 
-https://github.com/standard/eslint-config-standard
+[14] [prettier options](https://prettier.io/docs/en/options.html#print-width)
 
-[8]eslint-config-prettier:
+[15] [Trailing commas](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas#trailing_commas_in_functions)
 
-https://github.com/prettier/eslint-config-prettier
+[16] [EditorConfig](https://editorconfig.org/)
 
-[9]eslint-config-alloy:
+[17] [husky](https://typicode.github.io/husky/#/?id=install)
 
-https://github.com/AlloyTeam/eslint-config-alloy
-
-[10]ESLint plugins:
-
-https://eslint.org/docs/user-guide/configuring/plugins#configuring-plugins
-
-[11]ESLint 配置文件.eslintrc 参数说明:
-
-https://gist.github.com/rswanderer/29dc65efc421b3b5b0442f1bd3dcd046
-
-[12]webpack .eslintrc.js:
-
-https://github.com/webpack/webpack/blob/master/.eslintrc.js
-
-[13]eslint-plugin-vue:
-
-https://eslint.vuejs.org/user-guide/#faq
-
-[14]prettier options:
-
-https://prettier.io/docs/en/options.html#print-width
-
-[15]Trailing commas:
-
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas#trailing_commas_in_functions
-
-[16]EditorConfig:
-
-https://editorconfig.org/
-
-[17]husky:
-
-https://typicode.github.io/husky/#/?id=install
-
-[18]lint-staged:
-
-https://github.com/okonet/lint-staged
+[18] [lint-staged](https://github.com/okonet/lint-staged)
