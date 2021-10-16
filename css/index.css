@@ -1561,6 +1561,7 @@ img:not([src]) {
 }
 #bbTimeList {
   margin: 10px 0;
+  width: 100%;
 }
 :root {
   --hl-color: #eff;
