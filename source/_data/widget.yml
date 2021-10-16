@@ -3,7 +3,7 @@ top:
     id_name:
     name: 最新吐槽
     icon: fas fa-bolt
-    order: 2
+    order: 1
     html: |
       <div class="swiper-container swiper-container-aside">
         <div class="swiper-wrapper swiper-weapper-aside"></div>

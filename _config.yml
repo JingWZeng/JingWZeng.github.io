@@ -165,7 +165,7 @@ deploy:
   repo: https://github.com/JingWZeng/JingWZeng.github.io.git
   branch: master
 
-# 有复合图层的问题，造成卡顿了
+
 history_calendar:
   priority: 4
   enable: true
