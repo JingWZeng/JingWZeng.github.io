@@ -736,6 +736,7 @@ aside:
     sort_order: # Don't modify the setting unless you know how it works
   card_weibo:
     enable: false
+  card_map: true
   card_calendar:
     enable: false
 
