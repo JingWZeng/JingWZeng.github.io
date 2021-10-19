@@ -9,7 +9,7 @@ aside: false
 
 ```yaml
 - name: ZJingW's のブログ
-  link: https://jingwzeng.github.io/
+  link: https://myblog-six.vercel.app/
   avatar: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202108231635263.jpeg
-  descr: 爱折腾的小前端
+  descr: 俺叫曾小胖
 ```
