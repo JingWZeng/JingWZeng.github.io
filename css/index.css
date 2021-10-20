@@ -3688,6 +3688,32 @@ blockquote footer cite:before {
   text-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0,0.15);
   line-height: 1.5;
 }
+#page-header #piexls {
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  background-image: url("https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202110201655685.png");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+#page-header #gradient {
+  background-image: -webkit-linear-gradient(90deg, rgba(20,20,20,0.89) 5%, transparent 30%);
+  background-image: -moz-linear-gradient(90deg, rgba(20,20,20,0.89) 5%, transparent 30%);
+  background-image: -o-linear-gradient(90deg, rgba(20,20,20,0.89) 5%, transparent 30%);
+  background-image: -ms-linear-gradient(90deg, rgba(20,20,20,0.89) 5%, transparent 30%);
+  background-image: linear-gradient(0deg, rgba(20,20,20,0.89) 5%, transparent 30%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 #page-header #site-title {
   margin: 0;
   color: var(--white);
