@@ -165,7 +165,6 @@ deploy:
   repo: https://github.com/JingWZeng/JingWZeng.github.io.git
   branch: master
 
-
 history_calendar:
   priority: 4
   enable: true
@@ -202,13 +201,13 @@ magnet:
       icon: 🎮
     - name: 浏览器
       display_name: ZJingWの浏览器
-      icon: 🐱‍👓
+      icon: 📒
     - name: Vue2
       display_name: ZJingWのVue2
       icon: 👩‍💻
     # - name: 学习
     #   display_name: 小冰の读书笔记
-    #   icon: 📒
+    #   icon: 🐱‍👓
     # - name: 随想
     #   display_name: 小冰の胡思乱想
     #   icon: 💡
@@ -295,4 +294,4 @@ gitcalendar:
 
 # 双栏布局
 butterfly_article_double_row:
-  enable: true
+  enable: false
