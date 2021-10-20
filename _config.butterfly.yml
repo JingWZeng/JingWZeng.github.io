@@ -22,6 +22,7 @@ menu:
     Vercel部署: https://vercel.com/dashboard || fas fa-rocket
     腾讯云控制台: https://cloud.tencent.com/login || fab fa-intercom
     海贼王壁纸: https://www.zhihu.com/question/56339999 || fas fa-paper-plane
+    图片格式转换: https://renzhezhilu.gitee.io/webp2jpg-online/#/ || fas fa-bomb
   文章 || iconfont icon-wenzhang:
     时间轴: /archives/ || iconfont icon-shijianzhou
     标签: /tags/ || iconfont icon-biaoqian
@@ -152,7 +153,7 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109031753581.jpg
+index_img: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202110201645395.gif # https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202109031753581.jpg
 
 # If the banner of page not setting, it will show the top_img
 default_top_img: false
@@ -636,7 +637,7 @@ ClickShowText:
 
 # Default display mode (網站默認的顯示模式)
 # light (default) / dark
-display_mode: dark
+display_mode: light
 
 # Beautify (美化頁面顯示)
 beautify:
