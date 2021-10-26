@@ -13,6 +13,7 @@
     "version": "5.4.0"
   },
   "dependencies": {
+    "figlet": "^1.5.2",
     "gulp-html-minifier-terser": "^6.0.1",
     "hexo": "^5.0.0",
     "hexo-blog-encrypt": "^3.1.6",
