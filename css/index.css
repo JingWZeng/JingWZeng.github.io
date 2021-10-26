@@ -1563,6 +1563,9 @@ img:not([src]) {
   margin: 10px 0;
   width: 100%;
 }
+.card-widget.latestBB {
+  display: none;
+}
 :root {
   --hl-color: #eff;
   --hl-bg: #212121;
