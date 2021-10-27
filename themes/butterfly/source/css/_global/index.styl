@@ -230,8 +230,53 @@ if hexo-config('lazyload.enable') && hexo-config('lazyload.blur') && !hexo-confi
 #bbTimeList 
   margin: 10px 0
   width: 100%
+  display: none !important
 
 .card-widget.latestBB {
     display: none;
 }
 
+/* bber轮播 */
+#bber-talk 
+  background var(--card-bg)
+  color var(--fontcolor)
+  padding 0.6rem 1rem 0.5rem 1rem
+  border-radius 12px
+  cursor auto
+  box-shadow var(--card-box-shadow)
+  display -webkit-flex
+  display flex
+  -webkit-align-items center
+  align-items center
+  overflow hidden
+  transition all 0.3s
+  margin-bottom -0.2rem
+  margin: 10px 0px
+  z-index 10
+  position relative
+  &:not(a) 
+    font-weight bold
+  svg 
+    fill currentColor
+    vertical-align middle
+    display inline
+    margin-right 5px
+  .talk-list 
+    margin 0
+    padding 0
+    max-height 1.6rem
+    overflow hidden
+    margin-bottom -0.3rem
+    transition all 1s ease-in-out
+    :hover 
+      color #49b1f5 !important
+      transition all 0.15s ease-in-out
+    li 
+      list-style none
+      width 100%
+      white-space nowrap
+      text-overflow ellipsis
+      overflow hidden
+      &.item 
+        a 
+          cursor pointer
