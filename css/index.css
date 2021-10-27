@@ -1562,9 +1562,83 @@ img:not([src]) {
 #bbTimeList {
   margin: 10px 0;
   width: 100%;
+  display: none !important;
 }
 .card-widget.latestBB {
   display: none;
+}
+#bber-talk {
+  background: var(--card-bg);
+  color: var(--fontcolor);
+  padding: 0.6rem 1rem 0.5rem 1rem;
+  border-radius: 12px;
+  cursor: auto;
+  -webkit-box-shadow: var(--card-box-shadow);
+  box-shadow: var(--card-box-shadow);
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-bottom: -0.2rem;
+  margin: 10px 0px;
+  z-index: 10;
+  position: relative;
+}
+#bber-talk:not(a) {
+  font-weight: bold;
+}
+#bber-talk svg {
+  fill: currentColor;
+  vertical-align: middle;
+  display: inline;
+  margin-right: 5px;
+}
+#bber-talk .talk-list {
+  margin: 0;
+  padding: 0;
+  max-height: 1.6rem;
+  overflow: hidden;
+  margin-bottom: -0.3rem;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+#bber-talk .talk-list :hover {
+  color: #49b1f5 !important;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  -ms-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+#bber-talk .talk-list li {
+  list-style: none;
+  width: 100%;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#bber-talk .talk-list li.item a {
+  cursor: pointer;
 }
 :root {
   --hl-color: #eff;
