@@ -1,20 +1,20 @@
-top:
-  - class_name: latestBB
-    id_name:
-    name: 最新吐槽
-    icon: fas fa-bolt
-    order: 1
-    html: |
-      <div class="swiper-container swiper-container-aside">
-        <div class="swiper-wrapper swiper-weapper-aside"></div>
-      </div>
-      <a class="bb-btn button--animated" href="/artitalk/" title="查看全部"><i class="far fa-hand-point-right fa-fw"></i> 查看更多 </a>
-      <script>
-         window.kkBBConfig = {
-           limit: 9,
-           blog:'/artitalk/',
-           api_url:
-             'https://6130-a00-7gs665pr6a99ae5b-1303923768.tcb.qcloud.la/json/bber.json'
-      }
-      </script>
-      <script src="https://cdn.jsdelivr.net/npm/butterfly-bber-swiper/dist/index.min.js"></script>
+# top:
+#   - class_name: latestBB
+#     id_name:
+#     name: 最新吐槽
+#     icon: fas fa-bolt
+#     order: 1
+#     html: |
+#       <div class="swiper-container swiper-container-aside">
+#         <div class="swiper-wrapper swiper-weapper-aside"></div>
+#       </div>
+#       <a class="bb-btn button--animated" href="/artitalk/" title="查看全部"><i class="far fa-hand-point-right fa-fw"></i> 查看更多 </a>
+#       <script>
+#          window.kkBBConfig = {
+#            limit: 9,
+#            blog:'/artitalk/',
+#            api_url:
+#              'https://6130-a00-7gs665pr6a99ae5b-1303923768.tcb.qcloud.la/json/bber.json'
+#       }
+#       </script>
+#       <script src="https://cdn.jsdelivr.net/npm/butterfly-bber-swiper/dist/index.min.js"></script>
