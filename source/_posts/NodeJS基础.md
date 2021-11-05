@@ -61,3 +61,82 @@ NodeJS 遵循的模块化规范是`commonJS`。其原理及使用规则见 xxx�
 ![image-20211027163957024](https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202110271639084.png)
 
 在调试的时候呢。特别容易进入第三方库中。比如`JQuery`。这个时候如果你已经进入了，那就利用【单步跳出】的方法，跳出来。如果你还没有进入，那就利用【单步跳过】的方法直接执行该函数，跳到该函数的下一条语句。
+
+#### 循环依赖的解决
+
+```js
+// a.js
+console.log("a 开始");
+exports.done = false;
+var b = require("./b.js");
+console.log("在 a 中，b.done = %j", b.done);
+exports.done = true;
+console.log("a 结束");
+```
+
+```js
+//b.js
+console.log("b 开始");
+exports.done = false;
+var a = require("./a.js");
+console.log("在 b 中，a.done = %j", a.done);
+exports.done = true;
+console.log("b 结束");
+```
+
+```js
+//main.js
+console.log("main开始");
+let a = require("./a");
+let b = require("./b");
+console.log("在 main 中，a.done=%j，b.done=%j", a.done, b.done);
+```
+
+![image-20211028094650069](https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202110280946148.png)
+
+对比输出：当`main.js`加载`a.js`的时，`b.js`又加载了`a.js`。这个时候，`b.js`会去加载`a.js`，为了防止无限的循环。`nodeJS`是这样干的，此时返回给`b.js`的`a.js`是一个没有完成执行流程的`exports`对象的副本。也就是`a.js`执行到`exports.done = false`为止的一个副本。之后等`b.js`加载完成后，并将自己的`exports`对象给`a.js`。
+
+#### module.exports 和 exports 的区别
+
+它们两个是等价的，`exports`是`module.exports`的简写。
+
+**但是**，使用的时候需要注意
+
+```js
+exports = {
+  a: 3,
+};
+console.log(exports); // {a:3}
+console.log(module.exports); // {}
+console.log(exports === module.exports); // false
+```
+
+因为`exports={a:3}`，`exports`被赋值了，这样的话就会断开和`module.exports`之间的引用啦。此时它们就不是同一个对象了。所以此时没办法再用`module.exports`来导出。同样的给 `module.exports` 重新赋值也会断开它们之间的引用。
+
+所以使用的时候可以遵循以下原则：**因为`require`得到是`module.exports`导出的值**
+
+- 导出多个成员用`module.exports`和`exports`都可以
+- 导出单个成员只能用`module.exports`(因为此时用`exports`的话，`module.export`的值为`{}`)
+
+> 不出错：一直用`module.export`就可以啦！！！
+
+#### 简单非阻塞体验
+
+```
+//syl.txt
+ hello，Zeng!
+```
+
+```js
+var fs = require("fs");
+fs.readFile("syl.txt", function (err, data) {
+  if (err) return console.error(err);
+  console.log(data.toString());
+});
+
+console.log("程序执行完毕!");
+// 程序执行完毕
+// hello,Zeng！
+```
+
+上面就是非阻塞，其实就是异步。等到读取完毕才输出`syl.txt`里面的内容，不影响同步代码的执行。其实，`node`中用到的回调基本是匿名函数。
