@@ -745,7 +745,7 @@ aside:
     last_push_date: true
     sort_order: # Don't modify the setting unless you know how it works
   card_weibo:
-    enable: false
+    enable: true
   card_map: true
   card_calendar:
     enable: false
@@ -938,7 +938,7 @@ fcircle:
 # Don't modify the following settings unless you know how they work
 # 非必要請不要修改
 CDN:
-  card_weibo: https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN@1.9/js/weibo.js
+  card_weibo: https://cdn.jsdelivr.net/gh/JingWZeng/blog-CDN@2.6/js/weibo.js
 
   # main
   main_css: /css/index.css
