@@ -32,6 +32,15 @@ categories:
     - 简单来说就是服务端拿到数据进行解析渲染,直接生成`html`片段返回给前端
     - 传统的服务端模板引擎渲染整个页面
     - 服务端渲染生成的`html`代码块,前端通过`ajax`获取然后通过`JS`动态的添加
+- 在`js`文件中，也就是不在`vue`文件中，需要得到`vuex`里面的值的话，是木有办法拿到的，除非路由跳转才可以拿到，在`vue`文件中需要在`computed`中或者`watch`才可以响应拿到，但是在 js 文件中，目前我的做法就是存放在`cookie`或者`sessionStorage`中了。
+
+```js
+computed:{
+  getTotalCount(){
+    return this.$store.state.totalCount
+  }
+}
+```
 
 ---
 
