@@ -200,6 +200,33 @@ sort();
 reverse();
 ```
 
+#### Q9:vue 的组件懒加载？
+
+正常的在`script`引入子组件，生命周期是:
+父组件 created -> 子组件 created -> 子组件的 mounted -> 父组件 mounted
+
+```html
+<script>
+  import child from "./child.vue";
+  export default {
+    components: {
+      child,
+    },
+  };
+</script>
+```
+
+懒加载
+父组件 created -> 父组件 mounted -> 子组件 created -> 子组件 mounted
+
+```html
+<script>
+  export default {
+    child: () => import("./child.vue"),
+  };
+</script>
+```
+
 课外知识:如何利用`codePen`显示代码
 
 <iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/jingwzeng/embed/preview/MWvGKJM?default-tab=html%2Cresult&editable=true&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
