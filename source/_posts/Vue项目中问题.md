@@ -227,6 +227,40 @@ reverse();
 </script>
 ```
 
+#### Q10:解决 ESlint 和 prettier 的冲突?
+
+`eslint-plugin-prettier`将 `Prettier`的规则设置到`ESLint`的规则中。
+
+`eslint-config-prettier` 关闭 `ESLint`中与`Prettier`中会发生冲突的规则。
+
+1. 安装
+
+`yarn add eslint-plugin-prettier eslint-config-prettier -D`
+
+2. 在`.eslintrc.js`添加`prettier`插件
+
+```js
+module.exports = {
+
+ ...
+
+ extends: [
+
+  'plugin:vue/essential',*
+
+  'airbnb-base',*
+
+  'plugin:prettier/recommended' // 添加 prettier 插件*
+
+ ],
+
+ ...
+
+}
+```
+
+这样，我们在执行`eslint --fix`命令时，`ESLint`就会按照`Prettier`的配置规则来格式化代码，轻松解决二者冲突问题。
+
 课外知识:如何利用`codePen`显示代码
 
 <iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/jingwzeng/embed/preview/MWvGKJM?default-tab=html%2Cresult&editable=true&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">

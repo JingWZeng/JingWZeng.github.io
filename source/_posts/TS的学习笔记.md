@@ -7,6 +7,7 @@ top_img: https://cdn.jsdelivr.net/gh/JingWZeng/markdownImg/img/202111121629626.j
 tags: typeScript
 author: ZJingW
 categories: typeScript
+sticky: 100
 ---
 
 ## 基础
