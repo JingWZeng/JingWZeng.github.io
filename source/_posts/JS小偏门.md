@@ -172,3 +172,168 @@ Set.prototype.clear()：清除所有成员，没有返回值。
 父组件
 
 `<son :my-msg.sync = "val"/> //此处my-msg一定需要使用kebeb-base写法，驼峰是无效的`
+
+- async/await 是同步代码
+
+```js
+async function async1() {
+  console.log("async1 start");
+  await async2();
+  console.log("async1 end");
+}
+async function async2() {
+  console.log("async2");
+}
+console.log("script start");
+async1();
+console.log("script end");
+
+/*
+script start
+async1 start
+async2
+script end
+async1 end
+*/
+```
+
+- 提取 10 位的随机数
+
+```js
+const str = Math.random().toString(36).substr(2, 10);
+console.log(str);
+```
+
+- 获取 dom 最快的方法
+
+```html
+<div id="zero"></div>
+console.log(zero) // 返回的就是这个div
+```
+
+- 可选链操作符
+
+```js
+const obj = {
+  // name: 'zengxpang',
+  age: 25,
+  sex: "男",
+  days: {
+    // birth: '1998-06-12'
+  },
+};
+console.log(obj.days && obj.days.birth); // undefined
+console.log(obj.days?.birth); // undefined 可选链操作符啊啊啊 代替上面那种写法，可以链式调用哦，其实就相当于.操作符，只不过多了可选，就是兜底可以为空
+console.log(obj?.name);
+
+//注意在vue的template中还不支持可选链操作符
+```
+
+- 隐藏元素
+  > display-none: 元素不会占用空间，在页面中不显示，子元素也不会显示。
+  >
+  > opacity-0: 元素透明度将为 0，但元素仍然存在，绑定的事件仍旧有效仍可触发执行。
+  >
+  > visibility-hidden：元素隐藏，但元素仍旧存在，占用空间，页面中无法触发该元素的事件。
+
+> content： w3c 的->就是说定义的 height 和 width 是内容的宽高，实际显示的这部分+padding+border
+>
+> border-box: 怪异->就是定义的 height 和 width 就是实际的高宽，比如我就是要一个 100\*100 的盒子的时候，那直接设置这个属性就好啦。内容的宽度会自动调整的
+
+- 获取 url 中的参数
+
+```js
+const location = "https://juejin.cn/post/？&id='123'&username='zengxpang'";
+const q = {};
+location.replace(/([^?&=]+)=([^&]+)/g, (_, k, v) => (q[k] = v));
+console.log(q); // { id: "'123'", username: "'zengxpang'" }
+```
+
+<iframe frameborder="0" width="439" height="192" src="https://jex.im/regulex/#!embed=true&flags=&re=(%5B%5E%3F%26%3D%5D%2B)%3D(%5B%5E%26%5D%2B)"></iframe>
+
+- 字符串常用的方法
+
+```js
+const str = "abcdefg";
+console.log(str.includes("i")); // false
+console.log(str.startsWith("a")); // true 是不是以a开头，一般用于判断是不是http开头
+console.log(str.endsWith("g")); // true 字符串是否为某个字符串结尾。判断后缀名的时候尤其有效
+console.log(str.repeat(2)); // abcdefgabcdefg 就是str重复2次之后的字符
+
+// padEnd 在尾巴处拼接字符，长度是5，用第二个参数1来拼接
+const a = "abc".padEnd(5, "1");
+console.log(a); //abc11
+// padStart与padEnd相反
+const b = "abc".padStart(5, "1");
+console.log(b); // 11abc
+```
+
+- 利用 Object.entries 将对象转 Map
+
+```js
+const obj = { name: "zjw", age: 20 };
+const a = Object.entries(obj);
+console.log(a); // [ [ 'name', 'zjw' ], [ 'age', 20 ] ]
+const m = new Map(a);
+console.log(m); // { 'name' => 'zjw', 'age' => 20 }
+/*
+size：获取成员的数量
+set：设置成员 key 和 value
+get：获取成员属性值
+has：判断成员是否存在
+delete：删除成员
+clear：清空所有
+*/
+console.log(m.get("name")); // zjw
+```
+
+- 合并运算符
+  假设 name 变量不存在的时候，我需要给一个默认值给它，一般会使用 || 运算符。但是 JS 中，0 或者 false 都会执行||运算符。解决方法就是利用 `??`合并运算符来代替，只允许在 null 或者 undefined 的时候使用默认值。
+
+```js
+const name = "";
+name || "zjw"; // zjw
+name ?? "zjw"; // ''
+const age = null;
+age ?? 20; // 20
+```
+
+- 0.1+0.2 === 0.3 为 false 引出来的问题？
+  利用原生的 JS 解决的时候，利用 toFixed 来做，它在决定保留几位小数的过程中会四舍五入。
+
+```js
+parseFloat((0.1 + 0.2).toFixed(10)); // 0.3
+```
+
+```js
+// ES6提供了Number.EPSILON,它是一个数字，代表的是最小的误差
+function numQual(a, b) {
+  return Math.abs(a - b) < Number.EPSILON;
+}
+// 只要两个数相减的误差在Number.EPSILON这个范围内，那这两个数就是相等的
+```
+
+- BigInt
+
+`JavaScript`可以处理的最大数字是`2`的`53`次方 `- 1`，这一点我们可以在`Number.MAX_SAFE_INTEGER`中看到。
+
+```js
+consoel.log(Number.MAX_SAFE_INTEGER); //9007199254740991
+```
+
+更大的数字则无法处理，`ECMAScript2020`引入`BigInt`数据类型来解决这个问题。通过把字母`n`放在末尾, 可以运算大数据。
+
+`BigInt`可以使用算数运算符进行加、减、乘、除、余数及幂等运算。它可以由数字和十六进制或二进制字符串构造。此外它还支持`AND`、`OR`、`NOT`和`XOR`之类的按位运算。唯一无效的位运算是零填充右移运算符。
+
+```js
+const bigNum = 100000000000000000000000000000n;
+console.log(bigNum * 2n); // 200000000000000000000000000000n
+
+const bigInt = BigInt(1);
+console.log(bigInt); // 1n;
+
+const bigInt2 = BigInt("2222222222222222222");
+console.log(bigInt2); // 2222222222222222222n;
+```
+
+BigInt 是一个大整数，所以他不能用来存储小数。
