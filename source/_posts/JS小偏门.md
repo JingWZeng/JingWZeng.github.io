@@ -337,3 +337,78 @@ console.log(bigInt2); // 2222222222222222222n;
 ```
 
 BigInt 是一个大整数，所以他不能用来存储小数。
+
+- Vue 用 index 作为 key?
+
+如果不存在对数据逆序添加，逆序删除等破坏顺序的操作时,用 index 好点。其他情况下，不要用 index。因为在 vue 里面的 key 是判断是不是同一个节点的。
+
+```js
+'['+['a','b','v']+']'====>'[a,b,v]' // 真是神奇
+```
+
+- 13、Array.prototype.reduce
+
+  - 第一个参数 callback 函数： pre 为上次 return 的值，next 为数组的本次遍历的项
+  - 第二个参数为初始值，也是第一个 pre
+
+```js
+// 统计元素出现个数
+const nameArr = ["林三心", "sunshine_lin", "林三心", "林三心", "科比"];
+const totalObj = nameArr.reduce((pre, next) => {
+  if (pre[next]) {
+    pre[next]++;
+  } else {
+    pre[next] = 1;
+  }
+  return pre;
+}, {});
+console.log(totalObj); // { '林三心': 3, sunshine_lin: 1, '科比': 1 }
+```
+
+- HTTP
+
+HTTP/1.0 中一个请求一个 TCP 连接，请求结束之后立即断开连接。如果前一个请求的时间太长，就会有对头阻塞，因为用到的数据结构是队列。这个时候的对头阻塞是发生在客户端的。
+
+HTTP/1.1，每一个连接默认都是长连接，一个 TCP 连接，可以发送多个 http 请求，也就是说不用等到前一个响应收到，就可以发送下一个请求啦。这样就解决了 HTTP/1.0 的客户端的对头阻塞，但是 HTTP/1.1 规定，服务端的响应需要根据收到请求的顺序发送回去，这样就造成了对头阻塞，不过这个时候是发生在服务端的。
+
+HTTP/2 解决了服务端的对头阻塞，采用二进制分帧和多路复用的方式。因为 1.1 中数据包是文本格式，但是 2 中是二进制格式的，更小，而且带有排序的序号，可以打乱发送，接受的时候再重组就好啦。多路复用：在 1.1 中并发多个请求的时候需要多个 TCP 的链接吗，而且单个域名有 6-8 个 TCP 的链接限制。在多路复用中，同一个域名的所有的通信是在单个 TCP 链接里面的，而且支持并发请求和响应，互不干扰。
+
+- JSON.stringify 格式化
+
+```js
+console.log(JSON.stringify({ a: 1, b: 2 }, null, "\t"));
+/*
+{
+        "a": 1,
+        "b": 2
+}
+
+*/
+```
+
+- 字符串转数组
+
+```js
+[..."test"]; //  ["t", "e", "s", "t"]
+```
+
+- if 的判定条件 flag 为布尔值的时候
+
+```js
+function get1() {
+  console.log("get1");
+}
+function get2() {
+  console.log("get2");
+}
+
+function demo(flag) {
+  // flag ? get1() : get2();
+  // 保证flag是布尔值的话
+  // [get1, get2][Number(flag)]();
+  // 不能保证的话 ！！强行转成布尔值
+  [get1, get2][Number(!!flag)]();
+}
+console.log(demo(true));
+console.log(demo(false));
+```
