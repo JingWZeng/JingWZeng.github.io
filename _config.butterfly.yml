@@ -716,7 +716,7 @@ aside:
   card_announcement:
     enable: true
     content: 记录前端工作学习生活呀~~~
-    twopeople: '<img src="https://guangzan.gitee.io/imagehost/Illustrations/autumn.svg">' # winter||autumn||spring||summer||travel
+    # twopeople: '<img src="https://guangzan.gitee.io/imagehost/Illustrations/autumn.svg">' # winter||autumn||spring||summer||travel
   card_recent_post:
     enable: false
     limit: 5 # if set 0 will show all
@@ -746,7 +746,7 @@ aside:
     sort_order: # Don't modify the setting unless you know how it works
   card_weibo:
     enable: true
-  card_map: true
+  card_map: false
   card_calendar:
     enable: false
 
